@@ -2,18 +2,74 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>{% block title %}Beemymate{% endblock %}</title>
+
+        <link rel="icon" type="image/png" href="{{ asset('img/favicon.png') }}">
+
+        {% block stylesheets %}{{ encore_entry_link_tags('app') }}{% endblock %}
+        <link rel="stylesheets" href="{{ asset('styles/app.scss') }}">
+
+        {% block javascripts %}{{ encore_entry_script_tags('app') }}{% endblock %}
+        
+       
+    </head>
+
+
+    <body>
+        {% block nav %}
+            <nav class="nav">
+                <div class="container">
+                <!-- LOGO -->
+                <a href="#" class="nav-icon">
+                    <img src="img/logo.svg" alt="logo Beemymate">
+                </a>
+
+                <!-- NAVIGATION PAGES-->
+                <div class="main-navlinks">
+                    <button class="hamburger" type="button" aria-label="Toggle navigation" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="navlinks-container">
+                        <a href="#">Beemy coloc</a>
+                        <a href="#">Déposer une offre</a>
+                        <a href="#">Mes aides</a>
+                    </div>
+                </div>
+
+                <!-- ICON PROFIL -->
+                <div class="nav-authentication">
+                    <div class="action">
+                        <div class="profile" onclick="menuToggle();">
+                            <a href="#" class="sign-user">
+                                <img src="img/icon_profile.svg" alt="icon profile">
+                            </a>
+                        </div>
+                        <div class="menu">
+                            <ul>
+                                <li><a href="#">S'inscrire</a></li>
+                                <li><a href="#">Se connecter</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- BOUTONS INSCRIPTION/CONNEXION -->
+                    <div class="sign-btns">
+                        <button type="button">S'inscrire</button>
+                        <button type="button">Se connecter</button>
+                    </div>
+                </div>
+                </div>
+            </nav>
+
         {% endblock %}
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-    </head>
-    <body>
+
         {% block body %}{% endblock %}
     </body>
 </html>

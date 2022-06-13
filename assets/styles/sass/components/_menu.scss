@@ -1,0 +1,290 @@
+.nav{
+    width: 100%;
+    background: $blanc;
+    box-shadow: $shadow_menu;
+
+    .container{
+        padding: 15px 45px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: $tablette){
+            padding: 15px 20px;
+        }
+    }
+
+
+    .nav-icon {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        margin-right: 20px;
+
+        img {
+            width: 95%;
+        }
+
+        @media (max-width: $tablette){
+            order: 2;
+            margin: 0 auto;
+        }
+    }
+
+    .main-navlinks{
+        @media (max-width: $tablette){
+            order: 1;
+        }
+
+        .hamburger{
+            display: none;
+
+            @media (max-width: $tablette){
+                    width: 20px;
+                    height: 20px;
+                    cursor: pointer;
+                    border: none;
+                    display: flex;
+                    background: $blanc;
+                    align-items: center;
+                    position: relative;
+
+                & span {
+                    display: block;
+                    width: 100%;
+                    height: 2px;
+                    background: $corail;
+                    position: absolute;
+                    pointer-events: none;
+                    transition: opacity 0.3s 0.15s ease-out;
+                }
+                & span:nth-child(1),
+                & span:nth-child(3) {
+                    transition: transform 0.3s ease-out;
+                }
+                & span:nth-child(1) {
+                    transform: translateY(7px);
+                }
+                & span:nth-child(3) {
+                    transform: translateY(-7px);
+                }
+                &.open span:nth-child(1) {
+                    transform: translate(0) rotate(135deg);
+                }
+                &.open span:nth-child(2) {
+                    opacity: 0;
+                    transition: opacity 0s ease-out;
+                }
+                &.open span:nth-child(3) {
+                    transform: translate(0) rotate(-135deg);
+                }
+            }
+        }
+
+        .open {
+            @media (max-width: $tablette){
+                transform: translate(0%);
+            }
+        }
+
+        .navlinks-container{
+
+            @media (max-width: $tablette) {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                position: absolute;
+                background: $blanc;
+                top: 100%;
+                left: 0;
+                height: 100vh;
+                padding: 15px 50px 15px 20px;
+                border-right: 1px solid #c5c5c6;
+                transform: translate(-100%);
+            }
+
+            a{
+                margin: 0 10px;
+                font-size: 16px;
+                font-weight: 500;
+                text-decoration: none;
+                color: $noir;
+                display: inline-block;
+                position: relative;
+        
+                &:hover{
+                    transform: scaleX(1);
+                    color: $corail;
+                }
+        
+                &::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    bottom: -3px;
+                    width: 100%;
+                    height: 1px;
+                    transform: scaleX(0);
+                    transform-origin: left;
+                    color: $corail;
+                    background: $corail;
+                    transition: transform 0.3s ease-out;
+                }
+
+                @media (max-width: $tablette) {
+                    font-size: 18px;
+                    margin: 10px 0
+                }
+            }
+        }
+    }
+
+
+    .sign-btns{
+        button {
+            font-size: 16px;
+            min-width: 90px;
+            padding: 10px 10px;
+            margin: 0 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            border: solid 1.5px $corail; 
+            background-color: $blanc;
+            color: $corail;
+    
+            &:hover{
+                border: solid 1.5px $corail; 
+                background-color: $corail;
+                color: $blanc;
+                transition: 0.3s;
+            }
+        }
+
+        @media (max-width: $tablette) {
+            display: none;
+        }
+    }
+
+    .nav-authentication{
+        @media (max-width: $tablette) {
+            order: 3;
+            margin-left: 0;
+        }
+        
+
+        .action{
+            display: none;
+
+            .profile{
+                display: none;
+
+                .sign-user{
+                    @media (max-width: $tablette){
+                        cursor: pointer;
+                    }
+
+                    img{
+                        @media (max-width: $tablette){
+                            width: 20px;
+                        }
+                    }
+                }
+
+                @media (max-width: $tablette){
+                    cursor: pointer;
+                    height: 60px;
+                    overflow: hidden;
+                    position: relative;
+                    width: 60px;
+                    display: block;
+                }
+            }
+
+            @media (max-width: $tablette){
+                display: block;
+                position: fixed;
+                right: 0px;
+                top: 25px;
+
+            }
+        }
+
+        .menu {
+            display: none;
+
+            ul{
+                li{
+                    a{
+                        @media (max-width: $tablette){
+                            display: inline-block;
+                            color: $noir;
+                            font-size: 12px;
+                            font-weight: 600;
+                            padding-left: 15px;
+                            text-decoration: none;
+                            transition: 0.3s;
+
+                            &:hover{
+                                color: $corail;
+
+                                &::after {
+                                    transform: scaleX(1);
+                                }
+                            }
+
+                            &::after {
+                                content: "";
+                                display: block;
+                                position: unset;
+                                bottom: -3px;
+                                width: 100%;
+                                height: 1px;
+                                transform: scaleX(0);
+                                transform-origin: left;
+                                color: $corail;
+                                background: $corail;
+                                transition: transform 0.2s ease-out;
+                            }
+                        }
+                    }
+
+                    @media (max-width: $tablette){
+                        align-items: center;
+                        display: flex;
+                        justify-content: left;
+                        list-style: none;
+                        padding: 10px 0px;
+                    }
+                }
+            }
+
+            @media (max-width: $tablette){
+                display: block;
+                background-color:$blanc;
+                box-sizing:0 5px 25px rgba(0,0,0,0.1);
+                border-radius: 15px;
+                padding: 10px 20px;
+                position: absolute;
+                right: 8px;
+                width: 155px;
+                transition: 0.5s;
+                top: 120px;
+                visibility: hidden;
+                opacity: 0;
+
+                &::before{
+                    background-color: $blanc;
+                    content: '';
+                    height: 20px;
+                    position: absolute;
+                    right: 30px;
+                    transform:rotate(45deg);
+                    top:-5px;
+                    width: 20px;
+                }
+            }
+        }
+    }
+}
+  
+  

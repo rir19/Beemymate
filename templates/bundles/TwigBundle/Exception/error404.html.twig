@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+    <main id="container">
+        <section class="erreur">
+            <img src="{{ asset('img/error_404.svg') }}" alt="image 404">
+            <h1>Oups ! Tu t’es trompé de chambre !</h1>
+            <p>Il semble que nous ne trouvons pas la page que tu cherches. Pourquoi ne pas réessayer à partir de la page d’accueil ?</p>
+            <a href="#">Revenir à l’accueil</a>
+        </section>
+    </main>
+{% endblock %}
