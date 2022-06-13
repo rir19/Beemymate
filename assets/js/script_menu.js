@@ -1,3 +1,5 @@
+console.log('ok');
+
 const hamburgerToggler = document.querySelector(".hamburger")
 const navLinksContainer = document.querySelector(".navlinks-container");
 

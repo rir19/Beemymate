@@ -9,7 +9,7 @@
 import './styles/app.scss';
 import './js/script_menu.js';
 
-import 'bootstrap';
+// import 'bootstrap';
 import bsCustomFileInput from 'bs-custom-file-input';
 
 // start the Stimulus application
