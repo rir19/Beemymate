@@ -1,9 +1,156 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+<div id="home">
+    <header class="header">
+        <div class="texte">
+            <h1>La colocation à <br>votre <span class="couleur">image</span> !</h1>
+            <p>Trouve les colocations qui te ressemble<br> grâce à tes passions</p>
+            <a href="#">En savoir plus</a>
+        </div>
+    </header>
 
-<main id="container">
-    <h1>Bienvenur sur Beemymate</h1>
-    <p>lorem ipsum bla bla bla....</p>
-</main>
+    <main class="contain">
+        <section class="resume">
+            <h2>Beemymate, <span class="couleur">c'est</span>...</h2>
+            <div class="cadre">
+                <article>
+                    <img src="{{ asset('img/picto_communauté.svg') }}" alt="picto communauté">
+                    <h3>Une communauté</h3>
+                    <p>Grâce à notre mise en relation par centres d’intérêts</p>
+                </article>
+                <div class="vl"></div>
+                <article>
+                    <img src="{{ asset('img/picto_suivi.svg') }}" alt="picto suivi">
+                    <h3>Un suivi</h3>
+                    <p>Avec un accompagnement personnalisé, rien que pour toi</p>
+                </article>
+                <div class="vl"></div>
+                <article>
+                    <img src="{{ asset('img/picto_securiter.svg') }}" alt="picto sécurité">
+                    <h3>La sécurité</h3>
+                    <p>Pour tes documents qui restent à portée de mains</p>
+                </article>
+                <div class="vl"></div>
+                <article>
+                    <img src="{{ asset('img/picto_confiance.svg') }}" alt="picto confiance">
+                    <h3>La confiance</h3>
+                    <p>Envers ton ou ta prochaine coloc avec un premier aperçu vidéo</p>
+                </article>
+            <div>
+        </section>
+
+        <section class="histoire">
+            <article>
+                <img src="{{ asset('img/img_valeur.png') }}" alt="image de colocataire">
+            </article>
+            <article class="paragraphe">
+                <h2>L'histoire, <span>la mission et les valeurs</span> de Beemymate</h2>
+                <p>Environ la moitié des colocations se finissent mal, poussant beaucoup de personnes à ne plus retenter l’expérience. Bien souvent, les tensions viennent de la répartition des tâches ménagères, d’un rythme de vie différent ou même d’une mésentente entre les personnes. Qu’ils décident de retenter ou non l’expérience, ils sont forcés de repartir dans un processus de recherche d’appartement, ce qui est coûteux en temps et en argent. Quant au nouveau recrutement de colocataire, la peur que le même schéma se reproduise est toujours présente. C’est pour aider les colocataires à vivre en parfaite harmonie que nous avons créé Beemymate.</p>
+                <a href="{{path('propos')}}">Découvre notre mission</a>
+            </article>
+        </section>
+
+        <section class="chapitre">
+            <img class="img1" src="{{ asset('img/motif1.svg') }}" alt="motif">
+                <article>
+                    <h2>Le nouveau chapitre de ta vie commence ici !</h2>
+                    <p>Beemymate aide les étudiants et les jeunes actifs à se réunir en se basant sur leurs centres d’intérêts.<br>N’attend plus et rejoins-nous !</p>
+                    <a href="#">Démarre ton aventure</a>
+                </article>
+            <img class="img2" src="{{ asset('img/motif2.svg') }}" alt="motif">
+        </section>
+
+        <section class="avis">
+            <h2>Les <span class="couleur">Beemymaters</span></h2>
+                <div>
+                    <article>
+                        <img src="{{ asset('img/avis_benjamin.png') }}" alt="photo de Benjamin">
+                        <h3>Benjamin<br><span>20 ans</span></h3>
+                        <p class="avis1"><span class="guillemet1">“</span>Beemymate c’est vraiment la solution qui me manquait pour trouver une colocation qui me ressemble !<span class="guillemet2">”<span></p>
+                    </article>
+                    <article>
+                        <img src="{{ asset('img/avis_lola.png') }}" alt="photo de Lola">
+                        <h3>Lola<br><span>18 ans</span></h3>
+                        <p class="avis2"><span class="guillemet1">“</span>C’est la première fois de ma vie que je vis en autonomie et Beemymate a vraiment su me rassurer grâce à toutes leurs aides.<span class="guillemet2">”<span></p>
+                    </article>
+                    <article>
+                        <img src="{{ asset('img/avis_romeo.png') }}" alt="photo de Romeo">
+                        <h3>Roméo<br><span>24 ans</span></h3>
+                        <p class="avis3"><span class="guillemet1">“</span>Je ne savais pas trop quoi penser de l’annonce en la lisant, mais quand j’ai vu la vidéo de présentation de mes colocataires, j’ai su que c’était eux !<span class="guillemet2">”<span></p>
+                    </article>
+                </div>
+        </section>
+
+        <section class="abonnement">
+            <div class="fond"></div>
+            <article class="titre">
+                <h3>Les passionnés</h3>
+                <h2>Choisis ton plan en fonction de tes envies !</h2>
+            </article>
+            <article class="grille">
+                <div class="button">
+                    <div class="toggle-btn">
+                        <span style="margin: 0.8em; color:#FFFFFF;">Mois</span>
+                        <label class="switch">
+                            <input type="checkbox" id="checbox" />
+                            <span class="slider round"></span>
+                        </label>
+                        <span style="margin: 0.8em; color:#FFFFFF;">Année</span>
+                    </div>
+                </div>
+                <div class="package-container">
+                    <div class="packages">
+                        <h3>Le novice</h3>
+                        <h4>Gratuit</h4>
+                        <ul class="liste">
+                            <li><span>Beemy coloc</span><br>Retrouve toutes les annonces de colocation</li>
+                            <li><span>Mes aides</span><br>Retrouve toutes les informations pour t’aider dans tes démarches</li>
+                        </ul>
+                        <hr>
+                        <h2 class="text1">0€<sup>/mois</sup></h2>
+                        <h2 class="text2">0€<sup>/an</sup></h2>
+                        <a href="#">Je rejoins la team</a>
+                    </div>
+                    <div class="packages">
+                        <h3>Le captivé</h3>
+                        <h4>Étudiants</h4>
+                        <ul class="liste">
+                            <li><span>Beemy coloc</span><br>Retrouve toutes les annonces de colocation</li>
+                            <li><span>Mes aides</span><br>Retrouve toutes les informations pour t’aider dans tes démarches</li>
+                            <li><span>Annonces</span><br>Retrouve tous les détails d’une annonce : colocataires, superficie, etc.</li>
+                            <li><span>Déposer une offre</span><br>Trouve les personnes qui voudront se joindre à ton aventure</li>
+                            <li><span>Ma coloc</span><br>Retrouve tous les documents qui concernent ton habitation : quittance de loyers, factures, etc.</li>
+                            <li><span>Favoris</span><br>Garde les annonces qui te tapent dans l’oeil pour les retrouver au plus vite</li>
+                            <li><span>Messagerie</span><br>Prends contact avec tes futurs colocataires</li>
+                        </ul>
+                        <hr>
+                        <h2 class="text1">1€<sup>/mois</sup></h2>
+                        <h2 class="text2">12€<sup>/an</sup></h2>
+                        <a href="#">Je rejoins la team</a>
+                    </div>
+                    <div class="packages">
+                        <h3>L'épicurien</h3>
+                        <h4>Premium</h4>
+                        <ul class="liste">
+                            <li><span>Beemy coloc</span><br>Retrouve toutes les annonces de colocation</li>
+                            <li><span>Mes aides</span><br>Retrouve toutes les informations pour t’aider dans tes démarches</li>
+                            <li><span>Annonces</span><br>Retrouve tous les détails d’une annonce : colocataires, superficie, etc.</li>
+                            <li><span>Déposer une offre</span><br>Trouve les personnes qui voudront se joindre à ton aventure</li>
+                            <li><span>Ma coloc</span><br>Retrouve tous les documents qui concernent ton habitation : quittance de loyers, factures, etc.</li>
+                            <li><span>Favoris</span><br>Garde les annonces qui te tapent dans l’oeil pour les retrouver au plus vite</li>
+                            <li><span>Messagerie</span><br>Prends contact avec tes futurs colocataires</li>
+                        </ul>
+                        <hr>
+                        <h2 class="text1">5€<sup>/mois</sup></h2>
+                        <h2 class="text2">60€<sup>/an</sup></h2>
+                        <a href="#">Je rejoins la team</a>
+                    </div>
+                </div>
+      
+            </article>
+        </section>
+    
+    </main>
+</div>
 {% endblock %}

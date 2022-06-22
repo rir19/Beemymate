@@ -1,9 +1,17 @@
+@import "./sass/helpers/variables";
 @import "./sass/helpers/typos";
 @import "./sass/helpers/global";
 @import "./sass/helpers/reset";
-@import "./sass/helpers/variables";
 
 
 @import "./sass/components/menu";
+@import "./sass/components/footer";
 @import "./sass/components/home";
+@import "./sass/components/coloc";
+@import "./sass/components/logement";
+@import "./sass/components/aide";
+@import "./sass/components/propos";
+@import "./sass/components/faq";
+@import "./sass/components/inscription";
+@import "./sass/components/contact";
 @import "./sass/components/erreur";

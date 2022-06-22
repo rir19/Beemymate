@@ -1,0 +1,16 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Erreur 503 - Beemymate{% endblock %}
+
+{% block body %}
+
+    <main id="erreur">
+        <section class="contain">
+            <img src="{{ asset('img/error_503.svg') }}" alt="image 505">
+            <h1>Eh oh, on est en plein ménage de printemps, il va falloir patienter un petit peu !</h1>
+            <p>Cette page est en travaux. Reviens plus tard !</p>
+            <a href="{{path('home')}}">Revenir à l’accueil</a>
+        </section>
+    </main>
+{% endblock %}

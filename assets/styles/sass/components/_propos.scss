@@ -1,0 +1,262 @@
+#propos{
+    margin-top: 80px;
+    margin-bottom: 100px;
+
+    .header{
+        background: url("../../../../public/img/img_header_propos.jpg") no-repeat;
+        background-position: bottom;
+        background-size: cover;
+        height: 75vh;
+        border: 5px solid #ffffff;
+        border-radius: 80px;
+        border-width: 25px 30px; 
+
+        .texte{
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 15%;
+            line-height: 58px;
+
+            .couleur{
+                position: relative;
+                z-index: 2;
+        
+                &::before{
+                    content: '';
+                    position: absolute;
+                    background-color: $corail;
+                    transform: scaleX(1.05);
+                    opacity: 0.8;
+                    height: 20px;
+                    width: 100%;
+                    right: 0;
+                    bottom: 11px;
+                    z-index: -1;
+                } 
+            }
+
+            h1{
+                font-size: 55px;
+                font-weight: 800;
+                margin-bottom: 30px;
+            }
+
+            p{
+                font-size: 19px;
+                font-weight: 600;
+                margin-bottom: 40px;
+                line-height: 24px;
+            }
+        }
+    }
+
+
+
+    .contain{
+
+        .mission{
+            margin-top: 50px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+
+            h2{
+                text-align: center;
+            }
+    
+            .couleur{
+                position: relative;
+                z-index: 2;
+        
+                &::before{
+                    content: '';
+                    position: absolute;
+                    background-color: $corail;
+                    transform: scaleX(1.02);
+                    opacity: 0.7;
+                    height: 20px;
+                    width: 100%;
+                    right: 0;
+                    bottom: -2px;
+                    z-index: -1;
+                } 
+            }
+
+            .cadre{
+                display: flex;
+                margin: 0 auto 0;
+                margin-top: 25px;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                article{
+                    background-color: $blanc;
+                    box-shadow: $shadow_menu;
+                    margin: 15px;
+                    border-radius: 15px;
+                    padding: 20px;
+                    width: 25%;
+                    height: 100px;
+
+                    img{
+                        margin: 0 auto 0;
+                        display: block;
+                        height: 40px;
+                        margin-top: 5px;
+                    }
+                    p{
+                        text-align: center;
+                        margin: 15px 0;
+                        color: $gris_fonce;
+                    }
+                }
+            }
+        }
+
+
+        .histoire{
+            margin-top: 50px;
+            align-items: flex-end;
+            background-color: $corail;
+
+            .contenus{
+                display: flex;
+                flex-direction: row;
+                margin: 0 auto 0;
+                max-width: 1000px;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 10px 0 38px;
+                align-items: flex-end;
+
+                article{
+
+                    img{
+                        width: 430px;
+                    }
+                }
+    
+                .paragraphe{
+                    margin: 0 40px;
+                    margin-bottom: 24px;
+    
+                    h2{
+                        color: $blanc;
+                    }
+    
+                    p{
+                        margin-top: 20px;
+                        line-height: 22px;
+                        margin-bottom: 30px;
+                        font-size: 13px;
+                        color: $blanc;
+                    }
+                }
+            }
+        }
+
+
+        .equipe{
+            text-align: center;
+            margin-top: 80px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+
+            .couleur{
+                position: relative;
+                z-index: 2;
+        
+                &::before{
+                    content: '';
+                    position: absolute;
+                    background-color: $corail;
+                    transform: scaleX(1.05);
+                    opacity: 0.8;
+                    height: 20px;
+                    width: 100%;
+                    right: 0;
+                    bottom: -4px;
+                    z-index: -1;
+                } 
+            }
+
+            .swiper {
+                width: 58rem;
+            }
+            
+            
+
+            .responsive{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin: 0 auto 0;
+                margin-top: 45px;
+                justify-content: center;
+
+                article{
+                    width: 25%;
+                    background-color: $blanc;
+                    box-shadow: $shadow_avis;
+                    border-radius: 185px 15px 35px 35px;
+                    margin: 10px;
+                    padding: 15px 25px 25px;
+                    display: flex;
+                    flex-direction: column;
+
+                    .linkedin{
+                        display: flex;
+                        justify-content: end;
+                        margin-bottom: 15px;
+                        img{
+                            width: 30px;
+                        }
+                    }
+                    .photo{
+                        width: 170px;
+                        margin: 0 auto 0;
+                    }
+                    h3{
+                        margin-top: 15px;
+                        color: $corail;
+                        font-weight: 600;
+                        font-size: 20px;
+                        margin-bottom: 5px;
+                    }
+                    h4{
+                        font-weight: 400;
+                        font-size: 14px;
+                    }
+                    p{
+                        margin-top: 10px;
+                        color: $gris_fonce;
+                    }
+                    .passion{
+                        margin-top: 30px;
+                        justify-content: space-between;
+                        display: flex;
+                        color: $turquoise;
+                        h4{
+                            font-size: 15px;
+                        }
+                        ul{
+                            display: inline-block;
+                            li{
+                                display: inline;
+                                font-size: 14px;
+                                margin: 0 2px;
+                                text-align: end;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            
+        }
+          
+    }
+}

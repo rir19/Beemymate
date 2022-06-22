@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}S'inscrire - Beemymate{% endblock %}
+
+{% block body %}
+
+<div id="inscription">
+
+    <main class="contain">
+        <section class="part-fond"></section>
+
+        <section class="part-form">
+            <div class="fond">
+                <article>
+                    <h1>Excellente décision et bienvenue dans cette nouvelle aventure !</h1>
+                    <p>Créé ton compte afin d’accéder aux nombreuses offres de<br> logement et trouve ta colocation idéale.</p>
+                </article>
+
+                <article>
+                    <h3>Inscris-toi avec une adresse email :</h3>
+
+                    {{ form_start(registrationForm) }}
+                    <div class="nom">
+                        {{ form_row(registrationForm.prenom)}}
+                        {{ form_row(registrationForm.nom) }}
+                    </div>
+                    <div>
+                        {{ form_row(registrationForm.email) }}
+                    </div>
+                    <div class="naissance">
+                        {{ form_row(registrationForm.naissance) }}
+                    </div>
+                    <div>
+                        {{ form_row(registrationForm.plainPassword,) }}
+                    </div>
+                    <div class="condition">
+                        {{ form_row(registrationForm.agreeTerms, { 'label': 'J’accepte les conditions d’utilisation de Beemymate' }) }}
+                    </div>
+                    <div>
+                        <button type="submit" class="btn">Je m'inscris</button>
+                    </div>
+                    {{ form_end(registrationForm) }}
+                </article>
+
+                <article>
+                    <h3>J’ai déjà un compte !<a href="{{ path('app_login') }}"> Me connecter</a></h3>
+                </article>
+            </div>
+        </section>
+    </main>
+</div>
+{% endblock %}
+

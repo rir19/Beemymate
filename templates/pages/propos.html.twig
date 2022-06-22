@@ -1,0 +1,136 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}À propos de nous - Beemymate{% endblock %}
+
+{% block body %}
+
+<div id="propos">
+    <header class="header">
+        <div class="texte">
+            <h1>Ton bien-être<br>c'est notre <span class="couleur">priorité</span> !</h1>
+            <p>Nous avons pour but de trouver<br>la colocation de tes rêves</p>
+        </div>
+    </header>
+
+    <main class="contain">
+        <section class="mission">
+            <h2>Nos missions <span class="couleur">sont</span>...</h2>
+            <div class="cadre">
+                <article>
+                    <img src="{{ asset('img/picto_image.svg') }}" alt="picto colocation">
+                    <p>Te proposer une colocation<br>à ton image</p>
+                </article>
+                <article>
+                    <img src="{{ asset('img/picto_chat.svg') }}" alt="picto communication">
+                    <p>Garder une communication<br>saine au sein de la colocation</p>
+                </article>
+                <article>
+                    <img src="{{ asset('img/picto_demarche_dossier.svg') }}" alt="picto demarche">
+                    <p>T’accompagner<br>dans tes démarches</p>
+                </article>
+                <article>
+                    <img src="{{ asset('img/picto_espace.svg') }}" alt="picto s'organiser">
+                    <p>T’aider à t’organiser grâce<br>à notre espace “ma colocation”</p>
+                </article>
+                <article>
+                    <img class="confort" src="{{ asset('img/picto_etoiles.svg') }}" alt="picto confort">
+                    <p>Que tu te sentes en sécurité</p>
+                </article>
+            <div>
+        </section>
+
+        <section class="histoire">
+            <div class="contenus">
+                <article>
+                    <img src="{{ asset('img/photo_nous.png') }}" alt="image de colocataire">
+                </article>
+                <article class="paragraphe">
+                    <h2><span>L'histoire</span> de Beemymate</h2>
+                    <p>Tout commence en avril 2022 : cinq jeunes entrepreneuses, sur la fin de leurs études, réalisent que les expériences en colocation ne sont pas aussi idylliques qu’on voudrait le croire. Tout le monde n’a pas la chance de trouver immédiatement le Joey de son Chandler, ou la Rachel de sa Monica. Elles font le constat que bien souvent les tensions viennent de la répartition des taches ménagères, d’un rythme de vie différent ou même d’une mésentente entre les personnes.</p>
+                    <p>Elles décident alors de remédier au problème en imaginant une solution qui permettrait aux colocataires de se rencontrer en fonction de leurs centres d’intérêts.</p>
+                </article>
+            </div>
+        </section>
+
+
+        <section class="equipe">
+            <h2>Nos <span class="couleur">Beemymateuses</span></h2>
+                <div class="responsive">
+                    <article>
+                        <a class="linkedin" href="https://www.linkedin.com/in/marine-angot-b245aa177/" target="_blank"><img src="{{ asset('img/picto_linkedin_corail.svg') }}" alt="picto linkedin"></a>
+                        <img class="photo" src="{{ asset('img/marine.jpg') }}" alt="photo de Marine">
+                        <h3>Marine Angot</h3>
+                        <h4>Co-fondatrice - Cheffe de projet<br>&amp; développeuse</h4>
+                        <p>Issue d’une formation Webdesign, Marine s’est occupée de toute la partie dév. Le site sur lequel tu te balades actuellement ?  Eh ouais, c’est bien elle qui l’a créé !</p>
+                        <div class="passion">
+                            <h4>Passions :</h4>
+                            <ul>
+                                <li>#fitness</li>
+                                <li>#photographie</li>
+                            </ul>
+                        <div>
+                    </article>
+                    <article class="card">
+                        <a class="linkedin" href="https://www.linkedin.com/in/aur%C3%A9lie-leroy-aa912b186/" target="_blank"><img src="{{ asset('img/picto_linkedin_corail.svg') }}" alt="picto linkedin"></a>
+                        <img class="photo" src="{{ asset('img/aurelie.jpg') }}" alt="photo d'Aurélie">
+                        <h3>Aurélie Leroy</h3>
+                        <h4>Co-fondatrice - Direction artistique<br>&amp; UI designer</h4>
+                        <p>Avec son parcours artistique, Aurélie a travaillé sur toute la partie UI du site et de l’identité visuelle, aux côtés de Leslie. Sans elles, le site serait gris.</p>
+                        <div class="passion">
+                            <h4>Passions :</h4>
+                            <ul>
+                                <li>#voyage</li>
+                                <li>#danse</li>
+                            </ul>
+                        <div>
+                    </article>
+                    <article class="card">
+                        <a class="linkedin" href="https://www.linkedin.com/in/emma-le-van/" target="_blank"><img src="{{ asset('img/picto_linkedin_corail.svg') }}" alt="picto linkedin"></a>
+                        <img class="photo" src="{{ asset('img/emma.jpg') }}" alt="photo d'Emma'">
+                        <h3>Emma Le Van</h3>
+                        <h4>Co-fondatrice - UX designer</h4>
+                        <p>Emma a travaillé en collaboration avec Elodie pour gérer toute la partie UX de la plateforme. Ce que ça signifie ? Elles se sont mises à ta place pour imaginer la meilleure expérience.</p>
+                        <div class="passion">
+                            <h4>Passions :</h4>
+                            <ul>
+                                <li>#volleyball</li>
+                                <li>#gastronomie</li>
+                            </ul>
+                        <div>
+                    </article>
+                    <article class="card">
+                        <a class="linkedin" href="https://www.linkedin.com/in/leslie-quintin/" target="_blank"><img src="{{ asset('img/picto_linkedin_corail.svg') }}" alt="picto linkedin"></a>
+                        <img class="photo" src="{{ asset('img/leslie.jpg') }}" alt="photo de Leslie">
+                        <h3>Leslie Quintin</h3>
+                        <h4>Co-fondatrice  - UI designer</h4>
+                        <p>Grâce à sa formation de graphiste, Leslie s’est occupée de la partie visuelle, UI, et identité graphique de la marque, avec Aurélie. Si elles n’avaient pas été là, notre site serait moche.</p>
+                        <div class="passion">
+                            <h4>Passions :</h4>
+                            <ul>
+                                <li>#peinture</li>
+                                <li>#dessin</li>
+                            </ul>
+                        <div>
+                    </article>
+                    <article class="card">
+                        <a class="linkedin" href="https://www.linkedin.com/in/elodieslatine/" target="_blank"><img src="{{ asset('img/picto_linkedin_corail.svg') }}" alt="picto linkedin"></a>
+                        <img class="photo" src="{{ asset('img/elodie.jpg') }}" alt="photo d'Elodie'">
+                        <h3>Elodie Slatine</h3>
+                        <h4>Co-fondatrice  - UX designer<br>&amp; photographe</h4>
+                        <p>En étroite collaboration avec Emma, Elodie s’est occupée de l’expérience utilisateur. Elles ont pensé aux pires scénarios pour toi afin de ne te donner que le meilleur.</p>
+                        <div class="passion">
+                            <h4>Passions :</h4>
+                            <ul>
+                                <li>#photographie</li>
+                                <li>#voyage</li>
+                            </ul>
+                        <div>
+                    </article>
+                </div>
+        </section>
+
+
+    </main>
+</div>
+
+{% endblock %}

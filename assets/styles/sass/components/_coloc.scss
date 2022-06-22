@@ -1,0 +1,249 @@
+#coloc{
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    margin-top: 120px;
+    margin-bottom: 100px;
+
+    h1{
+        font-size: 24px;
+        font-weight: 700;
+
+        span{
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+
+    // RECHERCHE
+    .recherche{
+        margin: 25px 0;
+
+        form{
+            display: flex;
+            justify-content: space-between;
+            input{
+                border-radius: 15px;
+                box-shadow: $shadow_recherche;
+                padding: 10px 10px 10px 35px;
+                border: none;
+                color: $gris_fonce;
+                &::placeholder{
+                    color: $gris_fonce;
+                }
+            }
+
+            #ville{
+                background-image:url("../../../../public/img/picto_recherche.svg");
+                background-position: 12px 12px; 
+                background-repeat: no-repeat; 
+            }
+            #date{
+                background-image:url("../../../../public/img/picto_date.svg");
+                background-position: 12px 12px; 
+                background-repeat: no-repeat;
+            }
+            #select{
+                background-image:url("../../../../public/img/picto_type.svg");
+                background-position: 12px 12px; 
+                background-repeat: no-repeat; 
+                padding: 10px 10px 10px 32px;
+            }
+            #budget{
+                background-image:url("../../../../public/img/picto_budget.svg");
+                background-position: 12px 12px; 
+                background-repeat: no-repeat; 
+            }
+            #surface{
+                background-image:url("../../../../public/img/picto_surface.svg");
+                background-position: 12px 12px; 
+                background-repeat: no-repeat; 
+            }
+            #filtre{
+                background-image:url("../../../../public/img/picto_filtre.svg");
+                background-position: 12px 12px; 
+                background-repeat: no-repeat; 
+            }
+
+            input[type="date"]::-webkit-calendar-picker-indicator {
+                display: none;
+                -webkit-appearance: none;
+            }
+            select{
+                border-radius: 15px;
+                box-shadow: $shadow_recherche;
+                padding: 10px 25px;
+                border: none;
+                color: $gris_fonce;
+                
+            }
+        }
+    }
+
+
+    // ANNONCE
+    .annonce{
+        display: flex;
+        flex-direction: row;
+        background-color: $blanc;
+
+        div{
+            width: calc(100% / 2);
+            margin: 0 8px;
+        }
+
+        .carte{
+            
+            img{
+                width: 100%;
+            }
+        }
+
+       .modal{
+        width: 50%;
+        
+        .offre{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            margin: 0 0 15px 0;
+
+            article{
+                width: calc(100% / 2);
+                margin: 0 5px;
+                background-color: $blanc;
+                border-radius: 35px;
+                box-shadow: $shadow_offre;
+                height: 345px;
+                transition: transform .2s;
+
+                &:hover {
+                    -ms-transform: scale(1.02); 
+                    -webkit-transform: scale(1.02);
+                    transform: scale(1.02); 
+                }
+
+                .photo{
+                border-radius: 30px 30px 0px 0px;
+                width: 100%;
+                }
+            }
+
+            .infos{
+                position: relative;
+                width: auto;
+                margin: 0 20px;
+
+                .favoris{
+                    position: absolute;
+                    top: -160px;
+                    right: -6px;
+                }
+
+                .coloc{
+                    display: flex;
+                    flex-direction: row;
+                    position: absolute;
+                    top: -40px;
+                    right: -15px;
+                    justify-content: flex-end;
+                    img{
+                        margin: 0 2px;
+                        width: 26%;
+                    }
+                }
+
+                .lieu{
+                    margin-top: 18px;
+                    width: auto;
+
+                    ul{
+                        display: flex;
+                        flex-direction: row;
+
+                        li{
+                            padding: 0 2px;
+                            font-size: 14px;
+                            color: $gris_fonce;
+                            img{
+                                padding-right: 6px;
+                                width: 15px;
+                            }
+                        }
+                    }
+                }
+
+                .logement{
+                    margin-top: 8px;
+                    width: auto;
+
+                    ul{
+                        display: flex;
+                        flex-direction: row;
+
+                        li{
+                            padding: 0 2px;
+                            font-size: 16px;
+                            font-weight: 600;
+                            sup{
+                                font-size: 8px;
+                            }
+                        }
+                    }
+                }
+
+                .dispo{
+                    width: auto;
+                    color: $gris_fonce;
+                }
+
+                .detail{
+                    margin-top: 15px;
+                    width: auto;
+                    display: flex;
+                    flex-direction: row;
+
+                    ul{
+                        display: flex;
+                        flex-direction: row;
+                        width: auto;
+                        margin-right: 10px;
+
+                        li{
+                            padding: 0 2px;
+                            font-size: 14px;
+                            color: $gris_fonce;
+                            img{
+                                width: 18px;
+                            }
+                            sup{
+                                font-size: 8px;
+                            }
+                        }
+                    }
+                }
+
+                .prix{
+                    margin-top: 6px;
+                    width: auto;
+
+                    h3{
+                        font-size: 24px;
+                        color: $turquoise;
+                        font-weight: 700;
+                        span{
+                            color: $noir;
+                            font-weight: 500;
+                            font-size: 13px;
+                        }
+                    }
+
+                }
+            }
+        }
+        
+       }
+    }
+
+}

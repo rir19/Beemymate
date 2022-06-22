@@ -8,6 +8,8 @@
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/app.scss';
 import './js/script_menu.js';
+import './js/script_tarifs.js';
+import './js/script_faq.js';
 
 // import 'bootstrap';
 import bsCustomFileInput from 'bs-custom-file-input';

@@ -1,0 +1,229 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Beemy coloc{% endblock %}
+
+{% block body %}
+    <main id="coloc">
+        <h1>298 Résultats <span>dans Paris</span></h1>
+
+        <section class="recherche">
+            <form>
+                <input type="text" id="ville" placeholder="Ville">
+                <input type="date" id="date" placeholder="Date">
+                <select name="type" id="select">
+                    <option value="">Type de colocation</option>
+                    <option value="appartement">Appartement</option>
+                    <option value="maison">Maison</option>
+                </select>
+                <input type="number" id="budget" placeholder="Budget">
+                <input type="number" id="surface" placeholder="Surface">
+                <input id="filtre" placeholder="Plus de filtre">
+            </form>
+        </section>
+
+
+        <section class="annonce">
+            <div class="modal">
+                <div class="offre">
+                    <!--OFFRE1-->
+                    <article>
+                        <a href="{{path('logement1')}}">
+                        <img class="photo" src="{{ asset('img/logement1.jpg') }}" alt="photo cuisine du logement">
+                        <div class="infos">
+                            <img class="favoris" src="{{ asset('img/coeur_gris.svg') }}" alt="boutton favoris">
+                            <div class="coloc">
+                                <img src="{{ asset('img/profil_alain.svg') }}" alt="photo d'Alain">
+                                <img src="{{ asset('img/profil_coloc1.png') }}" alt="photo colocataire 2">
+                                <img src="{{ asset('img/profil_coloc2.png') }}" alt="photo colocataire 3">
+                            </div>
+                            <div class="lieu">
+                                <ul>
+                                    <li><img src="{{ asset('img/picto_localisation.svg') }}" alt="localisation"></li>
+                                    <li>Paris</li>
+                                    <li>-</li>
+                                    <li>Appartement</li>
+                                </ul>
+                            </div>
+                            <div class="logement">
+                                <ul>
+                                    <li>Chambre</li>
+                                    <li>-</li>
+                                    <li>T4 85m<sup>2</sup></li>
+                                </ul>
+                            </div>
+                            <div class="dispo">
+                                <p>Disponible maintenant</p>
+                            </div>
+                            <div class="detail">
+                                <ul>
+                                    <li><img src="{{ asset('img/picto_chambre.svg') }}" alt="picto chambre"></li>
+                                    <li>4</li>
+                                </ul>
+                                <ul>
+                                    <li><img src="{{ asset('img/picto_piece.svg') }}" alt="picto piece"></li>
+                                    <li>5</li>
+                                </ul>
+                                <ul>
+                                    <li><img src="{{ asset('img/picto_taille.svg') }}" alt="picto taille"></li>
+                                    <li>85m<sup>2</sup></li>
+                                </ul>
+                            </div>
+                            <div class="prix">
+                                <h3>990 €<span> /mois</span></h3>
+                            </div>
+                        </div>
+                        </a>
+                    </article>
+
+                    <!--OFFRE2-->
+                    <article>
+                        <img class="photo" src="{{ asset('img/logement2.jpg') }}" alt="photo salon du logement">
+                        <div class="infos">
+                            <img class="favoris" src="{{ asset('img/coeur_rose.svg') }}" alt="boutton favoris">
+                            <div class="coloc">
+                                <img src="{{ asset('img/profil_coloc3.png') }}" alt="photo colocataire 4">
+                                <img src="{{ asset('img/profil_coloc4.png') }}" alt="photo colocataire 5">
+                                <img src="{{ asset('img/profil_coloc5.png') }}" alt="photo colocataire 6">
+                            </div>
+                            <div class="lieu">
+                                <ul>
+                                    <li><img src="{{ asset('img/picto_localisation.svg') }}" alt="localisation"></li>
+                                    <li>Paris</li>
+                                    <li>-</li>
+                                    <li>Appartement</li>
+                                </ul>
+                            </div>
+                            <div class="logement">
+                                <ul>
+                                    <li>Chambre</li>
+                                    <li>-</li>
+                                    <li>T5 70m<sup>2</sup></li>
+                                </ul>
+                            </div>
+                            <div class="dispo">
+                                <p>Disponible maintenant</p>
+                            </div>
+                            <div class="detail">
+                                <ul>
+                                    <li><img src="{{ asset('img/picto_chambre.svg') }}" alt="picto chambre"></li>
+                                    <li>4</li>
+                                </ul>
+                                <ul>
+                                    <li><img src="{{ asset('img/picto_piece.svg') }}" alt="picto piece"></li>
+                                    <li>5</li>
+                                </ul>
+                                <ul>
+                                    <li><img src="{{ asset('img/picto_taille.svg') }}" alt="picto taille"></li>
+                                    <li>70m<sup>2</sup></li>
+                                </ul>
+                            </div>
+                             <div class="prix">
+                                <h3>950 €<span> /mois</span></h3>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            
+                <div class="offre">
+                    <!--OFFRE3-->
+                    <article>
+                        <img class="photo" src="{{ asset('img/logement3.jpg') }}" alt="photo cuisine du logement">
+                        <div class="infos">
+                            <img class="favoris" src="{{ asset('img/coeur_gris.svg') }}" alt="boutton favoris">
+                            <div class="coloc">
+                                <img src="{{ asset('img/profil_coloc6.png') }}" alt="photo colocataire 6">
+                            </div>
+                            <div class="lieu">
+                                <ul>
+                                    <li><img src="{{ asset('img/picto_localisation.svg') }}" alt="localisation"></li>
+                                    <li>Paris</li>
+                                    <li>-</li>
+                                    <li>Appartement</li>
+                                </ul>
+                            </div>
+                            <div class="logement">
+                                <ul>
+                                    <li>Chambre</li>
+                                    <li>-</li>
+                                    <li>T3 45m<sup>2</sup></li>
+                                </ul>
+                            </div>
+                            <div class="dispo">
+                                <p>Disponible maintenant</p>
+                            </div>
+                            <div class="detail">
+                                <ul>
+                                    <li><img src="{{ asset('img/picto_chambre.svg') }}" alt="picto chambre"></li>
+                                    <li>2</li>
+                                </ul>
+                                <ul>
+                                    <li><img src="{{ asset('img/picto_piece.svg') }}" alt="picto piece"></li>
+                                    <li>3</li>
+                                </ul>
+                                <ul>
+                                    <li><img src="{{ asset('img/picto_taille.svg') }}" alt="picto taille"></li>
+                                    <li>45m<sup>2</sup></li>
+                                </ul>
+                            </div>
+                            <div class="prix">
+                                <h3>690 €<span> /mois</span></h3>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!--OFFRE4-->
+                    <article>
+                        <img class="photo" src="{{ asset('img/logement2.jpg') }}" alt="photo salon du logement">
+                        <div class="infos">
+                            <img class="favoris" src="{{ asset('img/coeur_gris.svg') }}" alt="boutton favoris">
+                            <div class="coloc">
+                                <img src="{{ asset('img/profil_coloc7.png') }}" alt="photo colocataire 7">
+                                <img src="{{ asset('img/profil_coloc8.png') }}" alt="photo colocataire 8">
+                            </div>
+                            <div class="lieu">
+                                <ul>
+                                    <li><img src="{{ asset('img/picto_localisation.svg') }}" alt="localisation"></li>
+                                    <li>Paris</li>
+                                    <li>-</li>
+                                    <li>Appartement</li>
+                                </ul>
+                            </div>
+                            <div class="logement">
+                                <ul>
+                                    <li>Chambre</li>
+                                    <li>-</li>
+                                    <li>T4 55m<sup>2</sup></li>
+                                </ul>
+                            </div>
+                            <div class="dispo">
+                                <p>Disponible maintenant</p>
+                            </div>
+                            <div class="detail">
+                                <ul>
+                                    <li><img src="{{ asset('img/picto_chambre.svg') }}" alt="picto chambre"></li>
+                                    <li>3</li>
+                                </ul>
+                                <ul>
+                                    <li><img src="{{ asset('img/picto_piece.svg') }}" alt="picto piece"></li>
+                                    <li>4</li>
+                                </ul>
+                                <ul>
+                                    <li><img src="{{ asset('img/picto_taille.svg') }}" alt="picto taille"></li>
+                                    <li>50m<sup>2</sup></li>
+                                </ul>
+                            </div>
+                            <div class="prix">
+                                <h3>750 €<span> /mois</span></h3>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="carte">
+                <img src="{{ asset('img/carte.jpg') }}" alt="carte de localisation">
+            </div>
+        </section>
+    </main>
+{% endblock %}

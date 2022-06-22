@@ -1,17 +1,27 @@
 // Couleurs
-$corail: #ED6D62;
+$corail: #FE6D60;
+$corail_clair: #FBDBD8;
+$corail_medium: #f79188;
 $jaune: #FAB512;
+$jaune_clair: #FDF4E1;
 $turquoise: #01A6A1;
 $sapin: #016966;
 $blanc: #FFFFFF;
 $noir: #000000;
-$gris: #707070;
+$gris_fonce: #707070;
+$gris: #B9C0C1;
+$gris_fond: #E2E2E2;
 $blanc: #FFFFFF;
 
 
 // Shadow
-$box_shadow: 0px 10px 40px rgba(0, 0, 0, 0.08);
+$box_shadow: 10px 24px 54px 0px rgba(0, 0, 0, 0.06);
+$shadow_avis: 0px 10px 30px 0px rgba(0, 0, 0, 0.05);
+$shadow_offre: 0px 0px 10px 0 rgba(197, 197, 197, 0.56);
+$shadow_box: 0px 2px 12px 0px rgba(217, 217, 217, 1);
+$shadow_box2: 0px 2px 12px 0px rgba(217, 217, 217, 0.26);
 $shadow_menu: 0px 2px 12px 0px rgba(197, 197, 198, 0.418);
+$shadow_recherche: 0px 0px 14px 0 rgba(226, 226, 226, 1);
 
 
 // Responsives

@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes aides - Beemymate{% endblock %}
+
+{% block body %}
+
+<div id="aide">
+    <header class="header">
+        <div class="texte">
+            <h1>Mes <span class="couleur">aides</span> !</h1>
+            <p>Soyez sûr d'obtenir toutes<br>les aides auxquelles vous avez droit.</p>
+        </div>
+    </header>
+
+    
+<main class="contain">
+    <h2>Les aides auxquels tu peux <span class="couleur">prétendres</span> !</h2>
+    <h3>Beemymate te simplifie tes démarches : nous avons regroupé toutes les aides qui existent pour les étudiants et jeunes actifs en colocation afin de faciliter tes recherches</h3>
+
+    <div class="container" data-aos="zoom-in">
+        <div class="accordeon">
+            <div class="accordeon-item">
+                <button id="accordeon-button-1" aria-expanded="false"><span class="accordeon-title">La colocation : qu’est-ce que c’est ?</span><span class="icon" aria-hidden="true"></span></button>
+                <div class="accordeon-content">
+                    <p>Une colocation est la location par plusieurs locataires (colocataires) d'un même logement devenant leur résidence principale. Elle peut prendre la forme d'un bail unique signé par les tous colocataires, ou d'autant de contrats de location qu'il y a de colocataires (un bail par colocataire). Dans les 2 cas, la colocation obéit à des règles spécifiques.<br>
+                    <i>À savoir : La location d'un logement par un seul couple pacsé au moment de la signature du bail ou par un seul couple marié n'est pas une colocation.</i></p>
+                </div>
+            </div>
+
+            <div class="accordeon-item">
+                <button id="accordeon-button-2" aria-expanded="false"><span class="accordeon-title">Qu’est-ce qu’un dépôt de garantie / caution ?</span><span class="icon" aria-hidden="true"></span></button>
+                <div class="accordeon-content">
+                    <p>Il s’agit du versement exigé par le propriétaire pour couvrir d’éventuels manquements de la part d’un locataire (exemple : loyers ou charges impayés, réalisation des réparations locatives…). Le montant du dépôt de garantie, son versement et sa restitution sont encadrés par la loi.<br>
+                    <i>À savoir : il est possible qu’un logement meublé coûte plus cher qu’un logement non meublé.</i></p>
+                </div>
+            </div>
+
+            <div class="accordeon-item">
+                <button id="accordeon-button-3" aria-expanded="false"><span class="accordeon-title">As-t- on besoin de s’incrire pour voir les logement ?</span><span class="icon" aria-hidden="true"></span></button>
+                <div class="accordeon-content">
+                    <p>Le temps est restreint pour éviter que les produits attendent trop et s'abîme. Avec un temps court, si vous ne pouvez pas venir récupérer votre commande elle sera remis en ligne pour qu'une autre personne vienne la prendre.</p>
+                </div>
+            </div>
+
+            <div class="accordeon-item">
+                <button id="accordeon-button-4" aria-expanded="false"><span class="accordeon-title">De quoi ai-je besoin dans mon dossier ?</span><span class="icon" aria-hidden="true"></span></button>
+                <div class="accordeon-content">
+                    <p>Sur chaque fiche produit, vous pourrez retrouver la provenance du produit ainsi que l'agriculteur qui a cultiver le produit.</p>
+                </div>
+            </div>
+
+            <div class="accordeon-item">
+                <button id="accordeon-button-5" aria-expanded="false"><span class="accordeon-title">Comment organiser une visite ?</span><span class="icon" aria-hidden="true"></span></button>
+                <div class="accordeon-content">
+                    <p>Les agriculteurs ainsi que l'équipe de Pepeat suivent en directe le stock des bornes. Dès lors qu'il n'y a presque plus de stock, l'gariculteur est avertis ainsi que nous et l'équipe de Pepeat s'occupe d'aller récuperer chez l'agriculteur les produits et de les mettres dans les bornes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+{% endblock %}
