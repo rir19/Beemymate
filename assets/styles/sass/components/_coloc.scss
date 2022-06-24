@@ -5,6 +5,7 @@
     
     margin-top: 120px;
     margin-bottom: 100px;
+    padding: 0 2%;
 
     h1{
         font-size: 24px;
@@ -32,38 +33,63 @@
                 &::placeholder{
                     color: $gris_fonce;
                 }
+                @media (max-width: $laptop) {
+                    width: 100px;
+                    padding: 8px 8px 8px 35px;
+                }
+                @media (max-width: $tablette) {
+                    width: 120px;
+                }
             }
 
             #ville{
                 background-image:url("../../../../public/img/picto_recherche.svg");
                 background-position: 12px 12px; 
                 background-repeat: no-repeat; 
+                @media (max-width: $paysage) {
+                    width: 55%;;
+                }
             }
             #date{
                 background-image:url("../../../../public/img/picto_date.svg");
                 background-position: 12px 12px; 
                 background-repeat: no-repeat;
+                @media (max-width: $tablette) {
+                    display: none;
+                }
             }
             #select{
                 background-image:url("../../../../public/img/picto_type.svg");
                 background-position: 12px 12px; 
                 background-repeat: no-repeat; 
                 padding: 10px 10px 10px 32px;
+                @media (max-width: $tablette) {
+                    display: none;
+                }
             }
             #budget{
                 background-image:url("../../../../public/img/picto_budget.svg");
                 background-position: 12px 12px; 
                 background-repeat: no-repeat; 
+                @media (max-width: $paysage) {
+                    display: none;
+                }
             }
             #surface{
                 background-image:url("../../../../public/img/picto_surface.svg");
                 background-position: 12px 12px; 
                 background-repeat: no-repeat; 
+                @media (max-width: $paysage) {
+                    display: none;
+                }
             }
             #filtre{
                 background-image:url("../../../../public/img/picto_filtre.svg");
                 background-position: 12px 12px; 
                 background-repeat: no-repeat; 
+                @media (max-width: $paysage) {
+                    width: 25%;;
+                }
             }
 
             input[type="date"]::-webkit-calendar-picker-indicator {
@@ -98,6 +124,13 @@
             img{
                 width: 100%;
             }
+            @media (max-width: $tablette) {
+                width: 35%;
+            }
+            @media (max-width: $paysage) {
+                display: none;
+            }
+            
         }
 
        .modal{
@@ -128,6 +161,20 @@
                 border-radius: 30px 30px 0px 0px;
                 width: 100%;
                 }
+                @media (max-width: $ecran) {
+                    height: 300px;
+                }
+                @media (max-width: $tablette) {
+                    height: 310px;
+                }
+                @media (max-width: $paysage) {
+                    height: 420px;
+                    width: 80%;
+                    margin: 10px;
+                }
+                @media (max-width: 585px) {
+                    height: auto;
+                }
             }
 
             .infos{
@@ -139,6 +186,42 @@
                     position: absolute;
                     top: -160px;
                     right: -6px;
+                    @media (max-width: $laptop) {
+                        top: -148px;
+                    }
+                    @media (max-width: 1120px) {
+                        top: -130px;
+                    }
+                    @media (max-width: $ecran) {
+                        top: -120px;
+                    }
+                    @media (max-width: $tablette) {
+                        top: -130px;
+                    }
+                    @media (max-width: $paysage) {
+                        top: -245px;
+                        width: 45px;
+                    }
+                    @media (max-width: 585px) {
+                        top: -225px;
+                    }
+                    @media (max-width: 500px) {
+                        top: -190px;
+                    }
+                    @media (max-width: $mobile) {
+                        top: -170px;
+                    }
+                    @media (max-width: 400px) {
+                        top: -155px;
+                        width: 35px;
+                    }
+                    @media (max-width: 350px) {
+                        top: -135px;
+                    }
+                    @media (max-width: 320px) {
+                        top: -125px;
+                        width: 30px;
+                    }
                 }
 
                 .coloc{
@@ -170,6 +253,13 @@
                                 padding-right: 6px;
                                 width: 15px;
                             }
+                            @media (max-width: 585px) {
+                                font-size: 16px;
+                            }
+                            @media (max-width: 320px) {
+                                font-size: 14px;
+                            }
+                            
                         }
                     }
                 }
@@ -189,6 +279,12 @@
                             sup{
                                 font-size: 8px;
                             }
+                            @media (max-width: 585px) {
+                                font-size: 18px;
+                            }
+                            @media (max-width: 320px) {
+                                font-size: 16px;
+                            }
                         }
                     }
                 }
@@ -196,6 +292,9 @@
                 .dispo{
                     width: auto;
                     color: $gris_fonce;
+                    @media (max-width: 585px) {
+                        font-size: 14px;
+                    }
                 }
 
                 .detail{
@@ -216,9 +315,21 @@
                             color: $gris_fonce;
                             img{
                                 width: 18px;
+                                @media (max-width: 585px) {
+                                    width: 22px;
+                                }
+                                @media (max-width: 320px) {
+                                    width: 18px;
+                                }
                             }
                             sup{
                                 font-size: 8px;
+                            }
+                            @media (max-width: 585px) {
+                                font-size: 16px;
+                            }
+                            @media (max-width: 320px) {
+                                font-size: 14px;
                             }
                         }
                     }
@@ -236,14 +347,36 @@
                             color: $noir;
                             font-weight: 500;
                             font-size: 13px;
+                            @media (max-width: 585px) {
+                                font-size: 15px;
+                            }
+                        }
+                        @media (max-width: 585px) {
+                            font-size: 28px;
+                        }
+                        @media (max-width: 320px) {
+                            font-size: 24px;
                         }
                     }
 
                 }
             }
+            @media (max-width: $paysage) {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+        @media (max-width: $tablette) {
+            width: 60%;
+        }
+        @media (max-width: $paysage) {
+            width: 100%;
         }
         
        }
     }
-
+    @media (max-width: $paysage) {
+        margin-bottom: 50px;
+        padding: 0 3%;
+    }
 }

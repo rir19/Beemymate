@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 
-{% block title %}Beemy coloc{% endblock %}
+{% block title %}Beemy coloc - Beemymate{% endblock %}
 
 {% block body %}
     <main id="coloc">
@@ -78,6 +78,7 @@
 
                     <!--OFFRE2-->
                     <article>
+                        <a href="{{path('logement2')}}">
                         <img class="photo" src="{{ asset('img/logement2.jpg') }}" alt="photo salon du logement">
                         <div class="infos">
                             <img class="favoris" src="{{ asset('img/coeur_rose.svg') }}" alt="boutton favoris">
@@ -122,12 +123,14 @@
                                 <h3>950 €<span> /mois</span></h3>
                             </div>
                         </div>
+                        </a>
                     </article>
                 </div>
             
                 <div class="offre">
                     <!--OFFRE3-->
                     <article>
+                        <a href="{{path('logement3')}}">
                         <img class="photo" src="{{ asset('img/logement3.jpg') }}" alt="photo cuisine du logement">
                         <div class="infos">
                             <img class="favoris" src="{{ asset('img/coeur_gris.svg') }}" alt="boutton favoris">
@@ -170,11 +173,13 @@
                                 <h3>690 €<span> /mois</span></h3>
                             </div>
                         </div>
+                        </a>
                     </article>
 
                     <!--OFFRE4-->
                     <article>
-                        <img class="photo" src="{{ asset('img/logement2.jpg') }}" alt="photo salon du logement">
+                        <a href="{{path('logement4')}}">
+                        <img class="photo" src="{{ asset('img/logement4.jpg') }}" alt="photo salon du logement">
                         <div class="infos">
                             <img class="favoris" src="{{ asset('img/coeur_gris.svg') }}" alt="boutton favoris">
                             <div class="coloc">
@@ -217,6 +222,7 @@
                                 <h3>750 €<span> /mois</span></h3>
                             </div>
                         </div>
+                        </a>
                     </article>
                 </div>
             </div>

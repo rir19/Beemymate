@@ -10,6 +10,7 @@ import './styles/app.scss';
 import './js/script_menu.js';
 import './js/script_tarifs.js';
 import './js/script_faq.js';
+import './js/script_chatbot.js';
 
 // import 'bootstrap';
 import bsCustomFileInput from 'bs-custom-file-input';

@@ -1,0 +1,442 @@
+#depot{
+    background-color: $corail;
+    box-shadow: $shadow_menu;
+
+    .contain{
+        display: flex; 
+        align-items: center;         
+
+        .part-fond{
+            width: 40%;
+
+            article{
+                display: flex;
+                justify-content: center;
+                position: relative;
+
+                .illustration{
+                    position: fixed;
+                    bottom:280px;
+                    left: 70px;
+                    z-index: 0;
+                    width: 28%;
+                }
+                @media (max-width: $tablette){
+                    display: none;
+                }
+            }
+            @media (max-width: $ecran){
+                width: 50%;
+            }
+            @media (max-width: $tablette){
+                width: 0%;
+            }
+        }
+
+        .part-form{
+            background-color: $blanc;
+            width: 60%;
+            .fond{
+                margin-bottom: 50px;
+                padding-top: 120px;
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                margin-left: auto;
+                margin-right: auto;
+
+                .progressbar-wrapper {
+                    background-color: $gris_fond;
+                    color: white;
+                    border-radius: 60px;
+                    width: 100%;
+                    height: 15px;
+                    margin-bottom: 50px;
+                }
+                .progressbar {
+                    background-color: $corail;
+                    color: white;
+                    padding: 7.5px;
+                    text-align: right;
+                    font-size: 20px;
+                    border-radius: 37px;
+                }
+                .progressbar[title="downloading"] {
+                    background-color: $corail;
+                }
+                .progressbar[title="downloaded"] {
+                    background-color: $corail;
+                }
+                .mp4 {
+                   width: 15%;
+                }
+                .boutton:hover{
+                    border: 1px solid $corail;
+                    transition: 0.3s;
+                }
+                p{
+                    text-align: center;
+                }
+
+                .colonne{
+                    form{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        justify-content: space-between;
+                        div{
+                            width: 40%;
+                            @media (max-width: $paysage) {
+                                width: 50%;
+                                margin: 2px 4px;
+                            }
+                            input{
+                                width: 100%;
+                                @media (max-width: $paysage) {
+                                    width: auto;
+                                    margin: 0;
+                                }
+                            }
+                            label{
+                                @media (max-width: $mobile) {
+                                    text-align: center;
+                                }
+                            }
+                            @media (max-width: $mobile) {
+                                width: 90%;
+                            }
+                        }
+                        @media (max-width: $mobile) {
+                            flex-wrap: wrap;
+                            justify-content: center;
+                        }
+                    }
+                    
+                }
+
+                .choix{
+                    h4{
+                        @media (max-width: $mobile) {
+                            text-align: center;
+                        }
+                    }
+                    .pictos{
+                        flex-direction: row;
+                        flex-wrap: wrap;
+
+                        button{
+                            border-radius: 35px;
+                            border: 1px solid $blanc;
+                            background-color: $blanc;
+                            box-shadow: $shadow_offre;
+                            padding: 10px 15px;
+                            margin-bottom: 10px;
+                            width: 160px;
+                            text-align: left;
+                            margin-right: 10px;
+                            &:hover{
+                                border: 1px solid $corail;
+                                transition: 0.3s;
+                            }
+                            img{
+                                margin-right: 10px;
+                                margin-top: -1px;
+                                margin-bottom: -11px;
+                                padding-bottom: 7px;
+                            }
+                        }
+                        @media (max-width: $mobile) {
+                            justify-content: center;
+                        }
+                    }
+                }
+
+                .coloc{
+                    form{
+                        .select{
+                            margin-bottom: 10px;
+                        }
+                        div{
+                            flex-direction: row;
+                            justify-content: space-between;
+                            input{
+                                width: 245px;
+                                margin-right: 0;
+                                margin-left: 0;
+                            }
+                            select{
+                                width: 285px;
+                                border-radius: 30px;
+                                padding: 0 10px;
+                            }
+                            @media (max-width: $mobile) {
+                                flex-wrap: wrap;
+                            }
+                        }
+                    }
+                }
+
+                .telecharger{
+                    align-items: center;
+                    margin-bottom: 15px;
+                    div{
+                        flex-direction: column;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        input{
+                            width: 245px;
+                            margin-right: 0;
+                            margin-left: 0;
+                        }
+                        .upload{
+                            border-radius: 0px;
+                            border: none;
+                            box-shadow: none;
+                            width: 300px;
+                            margin-bottom: 10px;
+                            height: 45px;
+                            @media (max-width: $mobile) {
+                                width: auto;
+                                margin-left: 0;
+                                margin-right: 0;
+                            }
+                            
+                        }
+                        input[type=file]::-webkit-file-upload-button{
+                            border-radius: 35px;
+                            border: 1px solid $blanc;
+                            background-color: $blanc;
+                            box-shadow: $shadow_offre;
+                            padding: 10px 15px;
+                            width: 160px;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+                .passion{
+                    align-items: center;
+                    margin-bottom: 15px;
+                }
+                .desc{
+                    align-items: center;
+                    margin-bottom: 15px;
+                    h4{
+                        text-align: center;
+                    }
+                }
+
+                article{
+                    margin-bottom: 60px;
+
+                    h2{
+                        text-align: center;
+                    }
+                    h3{
+                        text-align: center;
+                        font-size: 16px;
+                        font-weight: 300;
+                        color: $corail;
+
+
+                        a{
+                            color: $corail;
+                            margin-left: 5px;
+                            &:hover{
+                                color:$corail_medium;
+                            }
+                        }
+                    }
+                    p{
+                        font-size: 12px;
+                        color: $gris;
+                        margin-bottom: 15px;
+                        margin-top: 5px;
+                        @media (max-width: $tablette){
+                            text-align: center;
+                        }
+                        @media (max-width: $paysage) {
+                            font-size: 14px;
+                        }
+                    }
+                    .valide{
+                        display: flex;
+                        justify-content: center;
+
+                        button{
+                            border-radius: 30px;
+                            border: 1px solid $corail;
+                            background-color: $corail;
+                            color: $blanc;
+                            height: 40px;
+                            width: 180px;
+                            font-size: 14px;
+                            margin: 0 auto 0;
+                            margin-bottom: 15px;
+                        }
+                    }
+
+                    form{
+                        width: 70%;
+                        margin-left: auto;
+                        margin-right: auto;
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 20px;
+
+                        #video{
+                            background-image:url("../../../../public/img/plus.svg");
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            padding: 15px;
+                            width: 110px;
+                        }
+
+                        .upload{
+                            border-radius: 0px;
+                            border: none;
+                            box-shadow: none;
+                            width: 310px;
+                            margin-bottom: 10px;
+                            height: 45px;
+                            @media (max-width: $mobile) {
+                                width: auto;
+                                margin-left: 0;
+                                margin-right: 0;
+                            }
+                            
+                        }
+                        input[type=file]::-webkit-file-upload-button{
+                            border-radius: 35px;
+                            border: 1px solid $blanc;
+                            background-color: $blanc;
+                            box-shadow: $shadow_offre;
+                            padding: 10px 15px;
+                            width: 160px;
+                            margin-right: 10px;
+                        }
+
+                        input{
+                            border-radius: 35px;
+                            border: 1px solid $blanc;
+                            background-color: $blanc;
+                            box-shadow: $shadow_offre;
+                            padding: 5px 10px;
+                            height: 40px;
+                            margin-bottom: 10px;
+                            width: 230px;
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+
+                        .champ{
+                            border-radius: 35px;
+                            border: 1px solid #FFFFFF;
+                            background-color: #FFFFFF;
+                            box-shadow: 0px 0px 10px 0 rgb(197 197 197 / 56%);
+                            padding: 5px 20px;
+                            height: 25px;
+                            width: 290px;
+                            @media (max-width: $mobile) {
+                                width: 80%
+                            }
+                        }
+
+                        div{
+                            display: flex;
+                            flex-direction: column;
+                            margin: 2px 0;
+
+                            li{
+                                color: $corail;
+                                font-size: 12px;
+                                margin-left: 10px;
+                            }
+
+                            input{
+                                border-radius: 35px;
+                                border: 1px solid $blanc;
+                                background-color: $blanc;
+                                box-shadow: $shadow_offre;
+                                height: 25px;
+                                padding: 5px 10px;
+                            }
+                        }
+
+                        .nom{
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            div{
+                                width: 46%;
+                            }
+                        }
+                        .naissance{
+                            div{
+                                display: flex;
+                                flex-direction: column;
+                                #registration_form_naissance{
+                                    display: flex;
+                                    flex-direction: row;
+
+                                    select{
+                                        width: calc(100% / 3);
+                                        margin: 0 5px;
+                                        border-radius: 35px;
+                                        border: 1px solid $blanc;
+                                        background-color: $blanc;
+                                        box-shadow: $shadow_offre;
+                                        padding: 5px 10px;
+                                    }
+                                }
+
+
+                            }
+                
+                        }
+                        .condition{
+                            margin: 10px 0 20px;
+                            div{
+                                display: flex;
+                                flex-direction: row-reverse;
+                                justify-content: flex-end;
+                                align-items: center;
+                                label{
+                                    margin: 0;
+                                }
+                                input{
+                                    box-shadow: none;
+                                    margin-right: 10px;
+                                }
+                            }
+                            input[type="checkbox"]:checked::after {
+                                background-color: $corail;
+                            }
+                        }
+                        @media (max-width: $paysage) {
+                            width: 90%;
+                        }
+                        
+                    }
+                }
+                @media (max-width: $tablette){
+                    padding-top: 0;
+                    margin-top: 35px;
+                }
+                
+            }
+            @media (max-width: $ecran){
+                width: 50%;
+            }
+            @media (max-width: $tablette){
+                width: 90%;
+                border-radius: 30px;
+            }
+        }
+        @media (max-width: $tablette){
+            justify-content: center;
+        }
+    }
+    @media (max-width: $tablette){
+        padding-top: 120px;
+    }
+}

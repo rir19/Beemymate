@@ -8,7 +8,7 @@
     color: $blanc;
 
     .container{
-
+        padding: 0 2%;
         .liens{
             display: flex;
             justify-content: space-between;
@@ -36,6 +36,12 @@
                         &:hover{
                             color: $corail_clair;
                         }
+                        @media (max-width: $paysage){
+                            margin: 2px 0;
+                        }
+                    }
+                    @media (max-width: $paysage){
+                        margin: 5px 0;
                     }
                 }
 
@@ -107,7 +113,38 @@
                             }
                         }
                     }
+                    h4{
+                        @media (max-width: $paysage){
+                            margin-bottom: 0px;
+                        }
+                    }
+                    @media (max-width: $paysage){
+                        margin-top: 15px;
+                    }
                 }
+
+                @media (max-width: $tablette){
+                    padding: 0;
+                }
+                @media (max-width: $paysage){
+                    width: 40%;
+                    margin: 5px 10px;
+                }
+                @media (max-width: $mobile){
+                    
+                }
+            }
+
+            @media (max-width: $tablette){
+                flex-wrap: wrap;
+                margin: 0 25px;
+            }
+            @media (max-width: $paysage){
+                justify-content: space-between;
+            }
+            @media (max-width: $mobile){
+                justify-content: flex-start;
+                margin: 0px;
             }
         }
 
@@ -118,5 +155,12 @@
                 font-weight: 500;
             }
         }
+        @media (max-width: $paysage){
+            padding-left: 3%;
+            padding-right: 3%;
+        }
+    }
+    @media (max-width: $paysage){
+        padding-top: 50px;
     }
 }

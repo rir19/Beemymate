@@ -1,0 +1,188 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Déposer une offre - Beemymate{% endblock %}
+
+{% block body %}
+
+<div id="depot">
+    <main class="contain">
+
+        <section class="part-fond">
+            <article>
+                <img class="illustration" src="{{ asset('img/img_depot.svg') }}" alt="illustration déposer">
+            </article>
+        </section>
+
+        <section class="part-form">
+            <div class="fond">
+                <div class="progressbar-wrapper">
+                    <div title="downloaded" class="progressbar mp4"></div>
+                </div>
+                <article>
+                    <h3>Étape 1 / 10</h3>
+                    <h2>Quel type de logement proposes-tu ?</h2>
+                    <form>
+                        <input class="boutton" type="button"value="Appartement">
+                        <input class="boutton" type="button"value="Maison">
+                        <input class="boutton" type="button"value="Annexe">
+                        <input class="boutton" type="button"value="Villa">
+                    </form>
+                </article>
+
+                <article>
+                    <h3>Étape 2 / 10</h3>
+                    <h2>Où est situé ton logement ?</h2>
+                    <form>
+                        <input class="champ" type="text" placeholder="Saisir ton adresse">
+                    </form>
+                    <p>* L'adresse exacte ne sera pas affichée dans l’annonce, mais elle est nécessaire pour localiser ton logement et afficher le quartier sur la carte.</p>
+                </article>
+
+                <article class="colonne">
+                    <h3>Étape 3 / 10</h3>
+                    <h2>Les caractéristiques</h2>
+                    <form>
+                        <div>
+                            <label>Loyer sans charges</label>
+                            <input type="number" class="champ" name="loyer" min="100" max="2000">
+                            <label>Charges</label>
+                            <input type="number" class="champ" name="charge" min="20" max="1000">
+                            <label>Caution</label>
+                            <input type="number" class="champ" name="causion" min="100" max="2000">
+                        </div>
+                        <div>
+                            <label>Nombre de pièces</label>
+                            <input type="number" class="champ" name="pièce" min="1" max="10">
+                            <label>Superficie en m²</label>
+                            <input type="number" class="champ" name="superficie" min="20" max="900">
+                            <label>Frais de dossier</label>
+                            <input type="number" class="champ" name="dosser" min="20" max="2000">
+                        </div>
+                    </form>
+                    <p>* Il s’agit des informations concernant le logement dans sa globalité.</p>
+                </article>
+
+                <article class="choix">
+                    <h3>Étape 4 / 10</h3>
+                    <h2>Quels sont les avantages de ton logement ?</h2>
+                    <form>
+                        <div>
+                            <h4>Ce qui est inclus dans le loyer</h4>
+                            <div class="pictos">
+                                <button><img src="{{ asset('img/picto_electricité.svg') }}" alt="picto   électricité">Électricité / Gaz</button></li>
+                                <button><img src="{{ asset('img/picto_eau.svg') }}" alt="picto eau">Eau</button>
+                                <button><img src="{{ asset('img/picto_wifi.svg') }}" alt="picto wifi">Wifi</button>
+                                <button><img src="{{ asset('img/picto_tele.svg') }}" alt="picto télévision">Netflix</button>
+                                <button><img src="{{ asset('img/picto_menage.svg') }}" alt="picto ménage">Ménage</button>
+                            </div>
+                        </div>
+                        <div>
+                            <h4>Les plus</h4>
+                            <div class="pictos">
+                                <button><img src="{{ asset('img/picto_machine.svg') }}" alt="picto machine à laver">Lave linge</button>
+                                <button><img src="{{ asset('img/picto_parking.svg') }}" alt="picto parking">Parking</button>
+                                <button><img src="{{ asset('img/picto_balcon.svg') }}" alt="picto balcon">Balcon</button>
+                            </div>
+                        </div>
+                    </form>
+                    <p>* L'adresse exacte ne sera pas affichée dans l’annonce, mais elle est nécessaire pour localiser ton logement et afficher le quartier sur la carte.</p>
+                </article>
+
+                <article class="coloc">
+                    <h3>Étape 5 / 10</h3>
+                    <h2>Combien de colocataires souhaites-tu accueillir ?</h2>
+                    <form>
+                        <div>
+                            <label>Colocataires</label>
+                            <input type="number" class="champ" name="colocataire" min="1" max="10">
+                        </div>
+                        <div>
+                            <label>Taille de la chambre</label>
+                            <input type="number" class="champ" name="taille" min="9" max="30">
+                        </div>
+                        <div class="select">
+                            <label>Meublé / Non meublé </label>
+                            <select name="meuble" id="meuble">
+                                <option value="meublé">Meublé</option>
+                                <option value="nonmeublé">Non meublé</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label>Disponible à partir du </label>
+                            <input type="date" class="champ" name="date" min="2022-06-01" max="2024-01-01">
+                        </div>
+                    </form>
+                    <p>* Il s’agit des informations concernant le logement dans sa globalité.</p>
+                </article>
+
+                <article>
+                    <h3>Étape 6 / 10</h3>
+                    <h2>Quels sont les règles à respecter ?</h2>
+                    <form>
+                        <input class="boutton" type="button"value="Filles uniquement">
+                        <input class="boutton" type="button"value="Graçon uniquement">
+                        <input class="boutton" type="button"value="Fumeurs autorisés">
+                        <input class="boutton" type="button"value="Animaux autorisés">
+                        <input class="boutton" type="button"value="Pas de soirées">
+                    </form>
+                </article>
+
+                <article>
+                    <h3>Étape 7 / 10</h3>
+                    <h2>Il est temps de décrire tous les membres de ta coloc !</h2>
+                    <form>
+                        <div class="telecharger">
+                            <h4>Combien de personnes vivent avec toi ?</h4>
+                            <div>
+                                <label>Colocataires</label>
+                                <div class="input">
+                                    <input type="number" class="champ" name="colocataire" min="1" max="10">
+                                    <input class="champ" type="text" placeholder="Nom de la personne">
+                                </div>
+                            </div>
+                            <div>
+                                <label style="text-align:center;">Télécharger une photo</label>
+                                <input type="file" class="upload" accept="image/png, image/jpeg">
+                            </div>
+                        </div>
+                        <div class="passion">
+                            <h4>Quelles sont vos passions ?</h4>
+                            <input class="champ" type="text" placeholder="Décrit nous tes passions">
+                        </div>
+                        <div class="desc">
+                            <h4>C’est le moment de te décrire toi, ton/tes colocs ainsi que l’ambiance globale :</h4>
+                            <input class="champ" type="text" placeholder="C’est le moment de te décrire, toi et ton/tes coloc(s). N’oublie pas de parler un peu de ton appartement et de la chambre de ton/ta futur(e) coloc ! Et puis, place quelques mots concernant les activités et passions que vous avez en commun entre coloc(s), c’est toujours plus sympa. ">
+                        </div>
+                    </form>
+                </article>
+
+                <article>
+                    <h3>Étape 8 / 10</h3>
+                    <h2>Maintenant ajoute quelques photos de l’appartement</h2>
+                    <form>
+                        <label style="text-align:center;">Télécharge tes photos</label>
+                        <input type="file" class="upload" accept="image/png, image/jpeg">
+                    </form>
+                </article>
+
+                <article>
+                    <h3>Étape 9 / 10</h3>
+                    <h2>Tu peux également ajouter une vidéo pour présenter la dynamique de votre coloc et rendre ton annonce plus chill.</h2>
+                    <form>
+                        <label style="text-align:center;">Télécharge une vidéo</label>
+                        <input type="attribue" id="video">
+                    </form>
+                </article>
+
+                 <article>
+                    <h3>Étape 10 / 10</h3>
+                    <h2>Félictations !<br> Ton annonce sera en ligne dans un instant.</h2>
+                    <p>Tu peux faire une petite danse de la victoire pour  célébrer ça !</p>
+                    <div class="valide"><button>Terminer</button></div>
+                </article>
+            </div>
+    
+    </main>
+</div>       
+{% endblock %}

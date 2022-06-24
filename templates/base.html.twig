@@ -43,7 +43,7 @@
                     </button>
                     <div class="navlinks-container">
                         <a class="{% if current_menu is defined and current_menu == 'propriete' %}active{% endif %}" href="{{path('propriete')}}">Beemy coloc</a>
-                        <a href="#">Déposer une offre</a>
+                        <a class="{% if current_menu is defined and current_menu == 'depot' %}active{% endif %}" href="{{path('depot')}}">Déposer une offre</a>
                         <a class="{% if current_menu is defined and current_menu == 'aides' %}active{% endif %}" href="{{path('aide')}}">Mes aides</a>
                     </div>
                 </div>
@@ -65,8 +65,9 @@
                             </ul>
                             {% else %}
                             <ul>
-                                <li><a>{{ app.user.prenom|capitalize }}</a></li>
-                                <li><a href="{{ path('app_logout') }}">Déconnexion</a></li>
+                                <li class="perso"><img src="{{ asset('img/profil_alain.svg') }}" alt="photo d'Alain"><a>{{ app.user.prenom|capitalize }}  {{ app.user.nom|capitalize }}</a></li>
+                                <hr>
+                                <li class="deconnexion"><a href="{{ path('app_logout') }}">Déconnexion</a></li>
                             </ul>
                             {% endif %}
                         </div>
@@ -79,9 +80,9 @@
                         <button type="button" onclick="window.location.href='{{ path('app_register') }}'">S'inscrire</button>
                         <button type="button" onclick="window.location.href='{{ path('app_login') }}'">Se connecter</button>
                     {% else %}
-                            <ul>
-                                <li><a>{{ app.user.prenom|capitalize }}</a></li>
-                                <li><a href="{{ path('app_logout') }}">Déconnexion</a></li>
+                            <ul class="compte">
+                                <li><img src="{{ asset('img/profil_alain.svg') }}" alt="photo d'Alain"><a>{{ app.user.prenom|capitalize }}  {{ app.user.nom|capitalize }}</a></li>
+                                <li><a class="lien" href="{{ path('app_logout') }}">Déconnexion</a></li>
                             </ul>
                     {% endif %}
                     </div>
@@ -117,7 +118,7 @@
                         <h5>Beemymate</h5>
                         <hr>
                         <div>
-                            <a href="#">Mes aides</a>
+                            <a href="{{path('accueil')}}">Accueil</a>
                             <a href="{{path('propos')}}">Qui sommes-nous ?</a>
                             <a href="{{path('faq')}}">FAQ</a>
                         </div>
@@ -135,7 +136,7 @@
                         <h5>Nous contacter</h5>
                         <hr>
                         <div>
-                            <a href="#">Prendre contact</a>
+                            <a href="{{path('contact')}}">Prendre contact</a>
                             <a href="mailto:contact@beemymate.com">contact@beemymate.com</a>
                             <a href="https://www.google.fr/maps/place/75012+Paris/@48.8351159,2.3996673,14z/data=!3m1!4b1!4m5!3m4!1s0x47e6728cb7d7d747:0x1c0b82c6e1d851b0!8m2!3d48.8293647!4d2.4265406" target="_blank">Paris 12</a>
                         </div>
@@ -160,5 +161,13 @@
             </div>
         </footer>
 
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+    <script id="62aa33eb00fb5c62a156ee9b" src="https://dashboard.chatfuel.com/integration/fb-entry-point.js" async defer></script>
+    
     </body>
 </html>

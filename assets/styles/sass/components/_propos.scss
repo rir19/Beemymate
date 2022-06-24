@@ -15,8 +15,9 @@
             max-width: 1000px;
             margin-left: auto;
             margin-right: auto;
-            padding-top: 15%;
+            padding-top: 10%;
             line-height: 58px;
+            margin: 0 5%;
 
             .couleur{
                 position: relative;
@@ -33,6 +34,14 @@
                     right: 0;
                     bottom: 11px;
                     z-index: -1;
+                    @media (max-width: $paysage) {
+                        right: 70px;
+                        width: 166px;
+                    }
+                    @media (max-width: $mobile) {
+                        right: 47px;
+                        width: 166px;
+                    }
                 } 
             }
 
@@ -40,6 +49,9 @@
                 font-size: 55px;
                 font-weight: 800;
                 margin-bottom: 30px;
+                @media (max-width: $paysage) {
+                    font-size: 45px;
+                }
             }
 
             p{
@@ -47,7 +59,20 @@
                 font-weight: 600;
                 margin-bottom: 40px;
                 line-height: 24px;
+                @media (max-width: $paysage) {
+                    font-size: 16px;
+                    margin-bottom: 20px;
+                }
             }
+
+            @media (max-width: $mobile) {
+                margin-top: 25%;
+                text-align: center;
+            }
+        }
+        @media (max-width: $mobile){
+            background-position: unset;
+            border-width: 25px 20px;
         }
     }
 
@@ -60,6 +85,7 @@
             max-width: 1000px;
             margin-left: auto;
             margin-right: auto;
+            padding: 0 5%;
 
             h2{
                 text-align: center;
@@ -110,6 +136,13 @@
                         margin: 15px 0;
                         color: $gris_fonce;
                     }
+                    @media (max-width: $paysage) {
+                        width: 35%;
+                        margin: 8px;
+                    }
+                    @media (max-width: $mobile) {
+                        width: 70%;
+                    }
                 }
             }
         }
@@ -134,6 +167,12 @@
 
                     img{
                         width: 430px;
+                        @media (max-width: $tablette) {
+                            width: 330px;
+                        }
+                        @media (max-width: $paysage) {
+                            width: 250px;
+                        }
                     }
                 }
     
@@ -152,17 +191,41 @@
                         font-size: 13px;
                         color: $blanc;
                     }
+                    @media (max-width: $tablette) {
+                        margin: 0 15px;
+                    }
+                    @media (max-width: $paysage) {
+                        margin: 5px 15px;
+                    }
                 }
+                @media (max-width: $tablette) {
+                    align-items: flex-start;
+                }
+                @media (max-width: $paysage) {
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 10px;
+                }
+                @media (max-width: $paysage) {
+                    padding: 5px 0;
+                }
+            }
+            @media (max-width: $tablette) {
+                padding: 35px 0 38px;
+            }
+            @media (max-width: $paysage) {
+                padding: 0 5%;
             }
         }
 
 
         .equipe{
             text-align: center;
-            margin-top: 80px;
+            margin-top: 80px !important;
             max-width: 1000px;
             margin-left: auto;
             margin-right: auto;
+            padding: 0 5%;
 
             .couleur{
                 position: relative;
@@ -251,12 +314,29 @@
                             }
                         }
                     }
+                    @media (max-width: $tablette) {
+                        width: 40%;
+                    }
+                    @media (max-width: $paysage) {
+                        width: 70%;
+                    }
+                    @media (max-width: $mobile) {
+                        width: 85%;
+                    }
+                }
+                @media (max-width: $tablette) {
+                    
                 }
             }
-
+            @media (max-width: $paysage) {
+                margin-top: 50px !important;
+            }
 
             
         }
           
+    }
+    @media (max-width: $tablette) {
+        margin-bottom: 70px;
     }
 }

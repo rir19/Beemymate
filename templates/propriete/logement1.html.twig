@@ -98,7 +98,7 @@
                         <li><img src="{{ asset('img/picto_balcon.svg') }}" alt="picto balcon">Balcon</li>
                     </ul>
                 </div>
-                <a>Prendre contact</a>
+                <a href="{{path('contact')}}">Prendre contact</a>
             </article>
         </section>
 
@@ -113,26 +113,21 @@
                 <article>
                     <img src="{{ asset('img/picto_dossier.svg') }}" alt="picto mon dossier">
                     <h3>De quoi ai-je besoin dans<br> mon dossier ?</h4>
-                    <a>En savoir plus</a>
+                    <a href="{{path('faq')}}">En savoir plus</a>
                 </article>
                 <article>
                     <img src="{{ asset('img/picto_visite.svg') }}" alt="picto visite">
                     <h3>Comment organiser<br> une visite ?</h4>
-                    <a>En savoir plus</a>
+                    <a href="{{path('faq')}}">En savoir plus</a>
                 </article>
                 <article>
                     <img src="{{ asset('img/picto_caution.svg') }}" alt="picto caution">
                     <h3>C’est quoi une<br> caution ?</h4>
-                    <a>En savoir plus</a>
+                    <a href="{{path('faq')}}">En savoir plus</a>
                 </article>
             </div>
         </section>
     </main>
 </div>
 
-<div class="annonce">
-    <div class="block">
-        <h2>Les autres annonces qui pourraient te plaire :</h2>
-    </div>
-</div>
 {% endblock %}

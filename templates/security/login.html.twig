@@ -10,13 +10,16 @@
 
         <section class="part-form">
             <div class="fond">
+                <article class="logo">
+                    <img src="{{ asset('img/logo.svg') }}" alt="logo Beemymate">
+                </article>
                 <article>
-                    <h1>Excellente décision et bienvenue dans cette nouvelle aventure !</h1>
-                    <p>Créé ton compte afin d’accéder aux nombreuses offres de<br> logement et trouve ta colocation idéale.</p>
+                    <h1>Ravis de te revoir !</h1>
                 </article>
 
                 <article>
                     <h3>Connecte-toi avec une adresse email :</h3>
+
                     <form method="post">
                         {% if error %}
                             <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -28,16 +31,19 @@
                             </div>
                         {% endif %}
 
-                        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-                        <label for="inputEmail">Email</label>
-                        <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
-
-                        <label for="inputPassword">Mot de passe</label>
-                        <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
-
-                        <input type="hidden" name="_csrf_token"
+                        <div>
+                            <label for="inputEmail">Email</label>
+                            <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+                        </div>
+                        
+                        <div> 
+                            <label for="inputPassword">Mot de passe</label>
+                            <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+                            <input type="hidden" name="_csrf_token"
                                value="{{ csrf_token('authenticate') }}"
-                        >
+                            >
+                        </div>
+                    
                         <div>
                             <button type="submit">Se connecter</button>
                         </div>
@@ -50,7 +56,11 @@
             </div>
         </section>
 
-        <section class="part-fond"></section>
+        <section class="part-fond">
+            <article>
+                <img class="illustration" src="{{ asset('img/img_connexion.svg') }}" alt="illustration connexion">
+            </article>
+        </section>
     </main>
 </div>
 {% endblock %}

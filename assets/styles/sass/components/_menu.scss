@@ -178,6 +178,32 @@
             }
         }
 
+        .compte{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            li{
+                display: flex;
+                align-items: center;
+                margin-right: 20px;
+                color: $corail;
+                img{
+                    margin-right: 5px;
+                }
+                a{
+                    font-weight: 600;
+                }
+                .lien{
+                    color: $noir;
+                    font-weight: 400;
+                    &:hover{
+                        transform: scaleX(1);
+                        color: $corail;
+                    }
+                }
+            }
+        }
+
         @media (max-width: $tablette) {
             display: none;
         }
@@ -239,6 +265,30 @@
             }
 
             ul{
+                .perso{
+                    flex-direction: column;
+                    img{
+                        margin-bottom: 5px;
+                    }
+                    a{
+                        padding-left: 0;
+                        color: $corail;
+                    }
+                }
+                .deconnexion{
+                    padding: 15px 0px 10px;
+                    a{
+                        margin: 0 auto 0;
+                        padding-left: 0;
+                    }
+                }
+                hr{
+                    border: 1px solid $gris;
+                    border-radius: 5px;
+                    width: 120px;
+                    margin: 0 auto 0;
+                    opacity: 0.3;
+                }
                 li{
                     a{
                         @media (max-width: $tablette){

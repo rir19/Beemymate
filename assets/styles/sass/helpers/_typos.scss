@@ -14,6 +14,9 @@ h2{
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 10px;
+    @media (max-width: $paysage) {
+        font-size: 25px;
+    }
 }
 h3{
     font-size: 16px;
@@ -47,4 +50,9 @@ label{
     font-weight: 300;
     margin-bottom: 5px;
     margin-top: 12px;
+}
+.alert{
+    font-family: 'Manrope', sans-serif;
+    color: $corail;
+    font-size: 14px;
 }

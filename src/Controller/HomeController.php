@@ -29,6 +29,14 @@ class HomeController extends AbstractController
         ]);
     }
 
+    #[Route('/pages/depot', name: 'depot')]
+    public function depot(): Response
+    {
+        return $this->render('pages/depot.html.twig', [
+            'current_menu' => 'depot'
+        ]);
+    }
+
     #[Route('/pages/faq', name: 'faq')]
     public function faq(): Response
     {

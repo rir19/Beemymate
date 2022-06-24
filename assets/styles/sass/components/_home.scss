@@ -13,10 +13,9 @@
 
         .texte{
             max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
-            padding-top: 12%;
+            padding-top: 10%;
             line-height: 58px;
+            margin: 0 5%;
 
             .couleur{
                 position: relative;
@@ -40,6 +39,9 @@
                 font-size: 55px;
                 font-weight: 800;
                 margin-bottom: 30px;
+                @media (max-width: $paysage) {
+                    font-size: 45px;
+                }
             }
 
             p{
@@ -47,6 +49,10 @@
                 font-weight: 600;
                 margin-bottom: 40px;
                 line-height: 24px;
+                @media (max-width: $paysage) {
+                    font-size: 16px;
+                    margin-bottom: 20px;
+                }
             }
 
             a{
@@ -65,6 +71,15 @@
 
                 }
             }
+
+            @media (max-width: $mobile) {
+                margin-top: 25%;
+                text-align: center;
+            }
+        }
+        @media (max-width: $mobile){
+            background-position: unset;
+            border-width: 25px 20px;
         }
     }
 
@@ -122,7 +137,9 @@
                     p{
                         color: $gris;
                     }
-
+                    @media (max-width: $paysage) {
+                        width: 35%;
+                    }
                 }
 
                 .vl{
@@ -131,7 +148,22 @@
                     display: inline-block;
                     margin: auto 0;
                     border-radius: 5px;
+                    @media (max-width: $paysage) {
+                        display: none;
+                    }
                 }
+
+                @media (max-width: $paysage) {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+            }
+
+            @media (max-width: $ecran){
+                padding: 0 5%;
+            }
+            @media (max-width: $paysage) {
+                margin-top: 20px;
             }
         }
 
@@ -151,6 +183,12 @@
 
                 img{
                     width: 430px;
+                    @media (max-width: $tablette) {
+                        width: 330px;
+                    }
+                    @media (max-width: $paysage) {
+                        width: 250px;
+                    }
                 }
             }
 
@@ -187,6 +225,24 @@
     
                     }
                 }
+                @media (max-width: $tablette) {
+                    margin: 0 15px;
+                }
+                @media (max-width: $paysage) {
+                    margin: 5px 15px;
+                }
+                
+            }
+            @media (max-width: $ecran){
+                padding: 0 5%;
+            }
+            @media (max-width: $tablette) {
+                align-items: flex-start;
+            }
+            @media (max-width: $paysage) {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 10px;
             }
         }
 
@@ -236,12 +292,28 @@
                 right: -11px;
                 top: -119px;
                 width: 180px;
+                @media (max-width: $tablette) {
+                    right: 0px;
+                    top: -65px;
+                    width: 113px;
+                }
+                @media (max-width: $mobile){
+                    width: 95px;
+                }
             }
             .img2{
                 position: absolute;
                 left: -11px;
                 bottom: -130px;
                 width: 140px;
+                @media (max-width: $tablette) {
+                    left: 0px;
+                    bottom: -80px;
+                    width: 100px;
+                }
+                @media (max-width: $mobile){
+                    width: 85px;
+                }
             }
 
         }
@@ -315,33 +387,92 @@
                         .guillemet1{
                             top: -20px;
                             left: -15px;
+                            @media (max-width: $tablette) {
+                                top: -22px;
+                                left: -14px;                            
+                            }
                         }
                         .guillemet2{
                             top: 28px;
                             right: 6px;
+                            @media (max-width: $tablette) {
+                                top: 47px;
+                                right: -14px;
+                            }
+                            @media (max-width: $mobile){
+                                top: 29px;
+                            }
                         }
                     }
                     .avis2{
                         .guillemet1{
                             top: -20px;
                             left: -14px;
+                            @media (max-width: $tablette) {
+                                top: -22px;
+                                left: -14px;                            
+                            }
                         }
                         .guillemet2{
                             top: 42px;
                             right: 55px;
+                            @media (max-width: $tablette) {
+                                top: 47px;
+                                right: -14px;
+                            }
+                            @media (max-width: $mobile){
+                                top: 36px;
+                                right: -16px;
+                            }
                         }
                     }
                     .avis3{
                         .guillemet1{
                             top: -20px;
                             left: -10px;
+                            @media (max-width: $tablette) {
+                                top: -22px;
+                                left: -14px; 
+                            }
                         }
                         .guillemet2{
                             top: 44px;
                             right: -9px;
+                            @media (max-width: $tablette) {
+                                top: 47px;
+                                right: -14px;
+                            }
+                            
                         }
                     }
+
+                    @media (max-width: $tablette) {
+                        margin: 0 10px;
+                        padding: 15px 20px 30px;
+                    }
+                    @media (max-width: $paysage) {
+                        margin: 10px;
+                    }
+                    @media (max-width: $mobile){
+                        padding: 15px 30px 30px;
+                        width: 60%;
+                    }
                 }
+                @media (max-width: $paysage) {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin-top: 25px;
+                }
+            }
+            @media (max-width: $ecran){
+                padding: 0 5%;
+            }
+            @media (max-width: $paysage) {
+                margin-top: 50px;
+            }
+            @media (max-width: $mobile){
+                flex-direction: column;
+                align-items: center;
             }
         }
 
@@ -368,6 +499,14 @@
 
                 h2{
                     text-transform: uppercase;
+                }
+                @media (max-width: $paysage) {
+                    padding: 40px 20px;
+                    margin-bottom: 40px;
+                    height: 1880px;
+                }
+                @media (max-width: $mobile){
+                    height: 1955px;
                 }
             }
 
@@ -444,7 +583,9 @@
                     .slider.round:before {
                         border-radius: 50%;
                     }
-
+                    @media (max-width: $mobile){
+                        margin-bottom: -10px;
+                    }
                 }
                 
 
@@ -501,6 +642,13 @@
                             border-radius: 5px;
                             width: 75%;
                             margin: 0 auto 0;
+
+                            @media (max-width: $ecran) {
+                                margin-top: 80px;
+                            }
+                            @media (max-width: $tablette) {
+                                margin-top: 0px;
+                            }
                         }
 
                         a{
@@ -513,8 +661,7 @@
                             font-size: 12px;
         
                             &:hover{
-                                background-color: $corail_clair;
-            
+                                background-color: $corail_medium;
                             }
                         }
 
@@ -536,12 +683,37 @@
                                 list-style-image: url('../../../../public/img/check.svg');
                                 text-align: left;
                             }
+                            @media (max-width: $tablette) {
+                                height: auto;
+                            }
+                        }
+                        @media (max-width: $tablette) {
+                            width: auto;
+                            padding: 25px 5% 35px;
+                            margin: 20px 15px;
                         }
                     }
+                    @media (max-width: $tablette) {
+                        flex-direction: column;
+                    }
+                }
+                @media (max-width: $paysage) {
+                    margin-top: -1820px;
+                }
+                @media (max-width: $mobile){
+                    margin-top: -1910px;
                 }
             }
 
-            
-         }
+            @media (max-width: $ecran){
+                padding: 0 5%;
+            }
+            @media (max-width: $paysage) {
+                margin-top: 50px;
+            }
+        }
+    }
+    @media (max-width: $tablette) {
+        margin-bottom: 70px;
     }
 }

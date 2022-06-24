@@ -1,0 +1,133 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Appartement Paris10 - T5{% endblock %}
+
+{% block body %}
+
+<div id="logement">
+    <header class="retour">
+        <a href="{{path('propriete')}}"><img src="{{ asset('img/retour.png') }}" alt="flèche retour">Retour aux résultats</a>
+    </header>
+
+
+    <main id="resultat">
+        <section class="photos">
+            <img src="{{ asset('img/photo_log1.jpg') }}" alt="photo 1 du logement">
+            <ul>
+                <li><img src="{{ asset('img/picto_photo.png') }}" alt="picto appareil photo"></li>
+                <li><a>voir plus de photo</a></li>
+            </ul>
+        </section>
+
+       
+        <section class="informations">
+            <article class="description">
+                <div class="button">
+                    <img src="{{ asset('img/coeur_rose2.svg') }}" alt="favoris">
+                    <a><img src="{{ asset('img/picto_video.svg') }}" alt="favoris">Regarder la vidéo</a>
+                </div>
+                <div class="elements">
+                    <h4>Ref : T570-3580</h3>
+                    <h1>Chambre - Appartement T5 70m² - Paris 10</h1>
+                    <div class="coloc">
+                        <img src="{{ asset('img/profil_coloc3.svg') }}" alt="photo colocataire 1">
+                        <img src="{{ asset('img/profil_coloc4.png') }}" alt="photo colocataire 2">
+                        <img src="{{ asset('img/profil_coloc5.png') }}" alt="photo colocataire 3">
+                    </div>
+                    <h2>Description</h2>
+                    <p>Salut,</p>
+                    <p>Nous c’est Alain, Martha et Rachel et on cherche un(e) nouveau.elle coloc qui viendra se joindre à nous.</p>
+                    <p>À propos de l’appart : c’est un 5 pièces de 70m2, orienté Nord-Est, au 5e étage, avec un balcon. La cuisine est ouverte sur le salon. WC séparés. 1 seule salle de bain avec une douche. On a chacun notre chambre. La tienne est déjà meublée avec un lit, un bureau, une chaise et un placard, elle n’attend plus que toi !</p>
+                    <p>J’espère que ton kiff c’est le sport (football, boxe, yoga) et les karaokés, parce qu’on en mange à toutes les sauces ! (Surtout la sauce pasan avec les ramen !)</p>
+                </div>
+                <div class="proximite">
+                    <hr>
+                    <h2>À proximité</h2>
+                    <ul>
+                        <li><img src="{{ asset('img/picto_metro.svg') }}" alt="picto métro">Métro</li>
+                        <li><img src="{{ asset('img/picto_bus.svg') }}" alt="picto bus">Bus</li>
+                        <li><img src="{{ asset('img/picto_gym.svg') }}" alt="picto gym">Gym</li>
+                        <li><img src="{{ asset('img/picto_magasin.svg') }}" alt="picto magasin">Supermaché</li>
+                    </ul>
+                    <hr>
+                </div>
+            </article>
+            <article class="box">
+                <div class="titre">
+                    <h3>Disponible maintenant</h3>
+                    <h4>950€ <span>/mois</span></h4>
+                </div>
+                <div class="detail">
+                    <ul>
+                        <li><img src="{{ asset('img/picto_taille.svg') }}" alt="picto taille">Appartement : 70m<sup>2</sup></li>
+                        <li><img src="{{ asset('img/picto_piece.svg') }}" alt="picto piece">Nombre de pièces : 5</li>
+                        <li><img src="{{ asset('img/picto_chambre.svg') }}" alt="picto chambre">1 chambre libre : 10m<sup>2</sup></li>
+                    </ul>
+                    <ul>
+                        <li><img src="{{ asset('img/picto_meuble.svg') }}" alt="picto meuble">Meublé</li>
+                        <li><img src="{{ asset('img/picto_depot.svg') }}" alt="picto depot de caution">Dépôt de garantie : 1 000€</li>
+                        <li><img src="{{ asset('img/picto_dossier2.svg') }}" alt="picto dossier">Frais de dossier : 280€</li>
+                    </ul>
+                </div>
+                <div class="passions">
+                    <h2>Ce qu'on a en commun</h2>
+                    <ul>
+                        <li><img src="{{ asset('img/picto_role.svg') }}" alt="picto jeu de rôle">Jeu de rôle</li>
+                        <li><img src="{{ asset('img/picto_console.svg') }}" alt="picto jeu vidéo">Jeu vidéo</li>
+                        <li><img src="{{ asset('img/picto_foot.svg') }}" alt="picto foot">Football</li>
+                        <li><img src="{{ asset('img/picto_tablier.svg') }}" alt="picto tablier">Ramen</li>
+                    </ul>
+                </div>
+                <div class="inclus">
+                    <h2>Inclus dans le loyer</h2>
+                    <ul>
+                        <li><img src="{{ asset('img/picto_electricité.svg') }}" alt="picto électricité">Électricité / Gaz</li>
+                        <li><img src="{{ asset('img/picto_eau.svg') }}" alt="picto eau">Eau</li>
+                        <li><img src="{{ asset('img/picto_wifi.svg') }}" alt="picto wifi">Wifi</li>
+                        <li><img src="{{ asset('img/picto_tele.svg') }}" alt="picto télévision">Netflix</li>
+                        <li><img src="{{ asset('img/picto_menage.svg') }}" alt="picto ménage">Ménage</li>
+                    </ul>
+                </div>
+                <hr>
+                <div class="plus">
+                    <h2>Les plus</h2>
+                    <ul>
+                        <li><img src="{{ asset('img/picto_machine.svg') }}" alt="picto machine à laver">Lave linge</li>
+                        <li><img src="{{ asset('img/picto_parking.svg') }}" alt="picto parking">Parking</li>
+                        <li><img src="{{ asset('img/picto_balcon.svg') }}" alt="picto balcon">Balcon</li>
+                    </ul>
+                </div>
+                <a href="{{path('contact')}}">Prendre contact</a>
+            </article>
+        </section>
+
+        <section class="carte">
+            <h2>Paris 10, France</h2>
+            <img src="{{ asset('img/maps.jpg') }}" alt="carte">
+        </section>
+
+        <section class="savoir">
+            <h2>À <span class="couleur">savoir</span></h2>
+            <div class="questions">
+                <article>
+                    <img src="{{ asset('img/picto_dossier.svg') }}" alt="picto mon dossier">
+                    <h3>De quoi ai-je besoin dans<br> mon dossier ?</h4>
+                    <a href="{{path('faq')}}">En savoir plus</a>
+                </article>
+                <article>
+                    <img src="{{ asset('img/picto_visite.svg') }}" alt="picto visite">
+                    <h3>Comment organiser<br> une visite ?</h4>
+                    <a href="{{path('faq')}}">En savoir plus</a>
+                </article>
+                <article>
+                    <img src="{{ asset('img/picto_caution.svg') }}" alt="picto caution">
+                    <h3>C’est quoi une<br> caution ?</h4>
+                    <a href="{{path('faq')}}">En savoir plus</a>
+                </article>
+            </div>
+        </section>
+    </main>
+</div>
+
+{% endblock %}

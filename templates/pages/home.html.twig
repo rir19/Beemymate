@@ -6,7 +6,7 @@
         <div class="texte">
             <h1>La colocation à <br>votre <span class="couleur">image</span> !</h1>
             <p>Trouve les colocations qui te ressemble<br> grâce à tes passions</p>
-            <a href="#">En savoir plus</a>
+            <a href="#concept">En savoir plus</a>
         </div>
     </header>
 
@@ -40,6 +40,7 @@
             <div>
         </section>
 
+        <div id="concept">
         <section class="histoire">
             <article>
                 <img src="{{ asset('img/img_valeur.png') }}" alt="image de colocataire">
@@ -50,13 +51,14 @@
                 <a href="{{path('propos')}}">Découvre notre mission</a>
             </article>
         </section>
+        </div>
 
         <section class="chapitre">
             <img class="img1" src="{{ asset('img/motif1.svg') }}" alt="motif">
                 <article>
                     <h2>Le nouveau chapitre de ta vie commence ici !</h2>
                     <p>Beemymate aide les étudiants et les jeunes actifs à se réunir en se basant sur leurs centres d’intérêts.<br>N’attend plus et rejoins-nous !</p>
-                    <a href="#">Démarre ton aventure</a>
+                    <a href="{{ path('app_register') }}">Démarre ton aventure</a>
                 </article>
             <img class="img2" src="{{ asset('img/motif2.svg') }}" alt="motif">
         </section>
@@ -110,7 +112,7 @@
                         <hr>
                         <h2 class="text1">0€<sup>/mois</sup></h2>
                         <h2 class="text2">0€<sup>/an</sup></h2>
-                        <a href="#">Je rejoins la team</a>
+                        <a href="{{ path('app_register') }}">Je rejoins la team</a>
                     </div>
                     <div class="packages">
                         <h3>Le captivé</h3>
@@ -127,7 +129,7 @@
                         <hr>
                         <h2 class="text1">1€<sup>/mois</sup></h2>
                         <h2 class="text2">12€<sup>/an</sup></h2>
-                        <a href="#">Je rejoins la team</a>
+                        <a href="{{ path('app_register') }}">Je rejoins la team</a>
                     </div>
                     <div class="packages">
                         <h3>L'épicurien</h3>
@@ -144,7 +146,7 @@
                         <hr>
                         <h2 class="text1">5€<sup>/mois</sup></h2>
                         <h2 class="text2">60€<sup>/an</sup></h2>
-                        <a href="#">Je rejoins la team</a>
+                        <a href="{{ path('app_register') }}">Je rejoins la team</a>
                     </div>
                 </div>
       
